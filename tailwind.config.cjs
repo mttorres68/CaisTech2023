@@ -8,11 +8,28 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif']
+        'Inter':[ 'Inter', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'Kameron': ['Kameron', 'sans-serif']
       },
+
+      backgroundImage:{
+        'caisTech-grandient': 'linear-gradient(59.86deg, #9572FC 10.00%, #43E7AD 40.00%, #E1D55D 66%, #d1cc96 98.30%)',
+        'background-grandient': 'linear-gradient(90deg, rgba(42,35,101,1) 49%, rgb(42,45,110,1) 68%'
+      }
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('tailwind-typewriter')({
+      wordsets:{
+        caisTech:{
+          words:['Preparem-se para o maior evento digital do sul do piauí!'],
+          reapet:-1,
+          eraseSpeed: 0.1,
+          delay:-2
+        }
+      }
+    })
   ],
 }
