@@ -1,13 +1,8 @@
-export default function Link(link){
+export default function Link({linkSection, nome, ...props}){
 
-    return(
-        <>
-            <a
-                className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-                href={link}
-            >
-                
-            </a>
-        </>
+    return(        
+        <li >
+            <a className="hover:text-[#1fc47a] font-semibold" href={linkSection}>{nome}</a>
+        </li>
     )
 }
