@@ -1,8 +1,14 @@
 export default function Link({linkSection, nome, ...props}){
 
     return(        
-        <li >
-            <a className="hover:text-[#1fc47a] font-semibold" href={linkSection}>{nome}</a>
+        <li >            
+            <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+                <a href={linkSection} className="font-display max-w-sm font-semibold leading-tight">
+                    <span className="link link-underline link-underline-black text-white"> {nome} </span>
+                </a>
+            </div>            
         </li>
     )
-}
+} 
+
+
