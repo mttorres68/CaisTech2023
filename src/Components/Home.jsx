@@ -34,9 +34,9 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-6">
                         <button 
-                            className=" border-2 border-[#360454] hover:border-[#1fc47a] transform transition hover:scale-110 ease-in-out duration-300 font-bold bg-[#a6c1ee] text-gray-800  px-5 py-2 rounded-full hover:bg-[#87acec]"
+                            className=" border-2 hover:border-[#1fc47a] transform transition hover:scale-110 ease-in-out text-white duration-300 font-bold bg-[#49018c]  px-5 py-2 rounded-full"
                         >
-                            Escrever-se
+                            Inscrever-se
                         </button>
                         <Icons
                             onclick={() => setNavbarOpen(!navbarOpen)}
