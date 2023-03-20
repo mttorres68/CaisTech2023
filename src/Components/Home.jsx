@@ -51,21 +51,21 @@ export default function Home() {
                 <h1 className=" text-2xl lg:text-4xl xl:text-6xl text-white font-bold ">
                     Edições anteriores
                 </h1>
-                <div className="bg-mycolor h-0.5 rounded-2xl w-60 lg xl:h-1.5 mb-2"></div>
+                <div className="bg-mycolor h-0.5 rounded-2xl w-[22vh] md:w-[22vh] lg:w-[32vh] xl:w-[52vh] lg xl:h-1.5 mb-2"></div>
 
             </div>
             <div
                 id="galeria"
-                className={` mx-2  grid grid-cols-1 lg:grid-cols-2 gap-2 auto-rows-auto bg-clip-border order-last `}
+                className={` mx-2  grid grid-cols-1 lg:grid-cols-2 gap-2 auto-rows-auto bg-clip-border order-last bg-gradient-to-b from-purple-900 to-blue-900 `}
             >
-                <div className="h-60 sm:h-64 xl:h-[69vh] rounded-lg">
-                    <Carousel slideInterval={2500}>
-                        <img src="https://i.imgur.com/cdwmL4D.jpg" alt="" />
-                        <img src="https://i.imgur.com/tJQS6w2.jpg" alt="..." />
-                        <img src="https://i.imgur.com/kHVz1Zc.jpg" alt="..." />
-                    </Carousel>
-                </div>
-                <div className="p-4 opacity-95 bg-gradient-to-b from-purple-900 to-blue-900 rounded-lg">
+                <div className="p-4 opacity-95  rounded-lg">
+                    <div className="h-60 sm:h-64 xl:h-[69vh] boxShadow ">
+                        <Carousel slideInterval={2500} >
+                            <img src="https://i.imgur.com/cdwmL4D.jpg" alt="" />
+                            <img src="https://i.imgur.com/tJQS6w2.jpg" alt="..." />
+                            <img src="https://i.imgur.com/kHVz1Zc.jpg" alt="..." />
+                        </Carousel>
+                    </div>
                     <div className="bg-mycolor h-1.5 w-60 rounded-full"></div>
                     <h2 className="text-xl lg:text-2xl xl:text-4xl text-white font-bold">
                         Edição CaisTech 2022
@@ -81,7 +81,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="p-4 opacity-95 bg-gradient-to-b from-purple-900 to-blue-900 rounded-lg">
-                    <div className="bg-mycolor h-2 w-60"></div>
+                    <div className="bg-mycolor h-2 w-60 rounded-full"></div>
                     <h2 className="text-xl lg:text-2xl xl:text-4xl text-white   font-bold">
                         Edição CaisTech 2019
                     </h2>
@@ -92,19 +92,20 @@ export default function Home() {
                         um meme da Internet. Manoel Gomes nasceu em Balsas e, desde a
                         infância, se interessava pela música.
                     </p>
-                </div>
-                <div>
-                    {/* <h1 className="my-4 ml-4 text-xl lg:text-2xl xl:text-4xl text-white font-bold">
-                    Manoel Caneta Gomes
-                    </h1> */}
-                    <div className="h-60 sm:h-64 xl:h-[69vh]">
-                        <Carousel slideInterval={2500}>
-                            <img src="https://i.imgur.com/cdwmL4D.jpg" alt="" />
-                            <img src="https://i.imgur.com/tJQS6w2.jpg" alt="..." />
-                            <img src="https://i.imgur.com/kHVz1Zc.jpg" alt="..." />
-                        </Carousel>
+                    <div>
+                        {/* <h1 className="my-4 ml-4 text-xl lg:text-2xl xl:text-4xl text-white font-bold">
+                        Manoel Caneta Gomes
+                        </h1> */}
+                        <div className="h-60 sm:h-64 xl:h-[69vh]">
+                            <Carousel slideInterval={2500}>
+                                <img src="https://i.imgur.com/cdwmL4D.jpg" alt="" />
+                                <img src="https://i.imgur.com/tJQS6w2.jpg" alt="..." />
+                                <img src="https://i.imgur.com/kHVz1Zc.jpg" alt="..." />
+                            </Carousel>
+                        </div>
                     </div>
                 </div>
+                
             </div>            
         </div>
     </div>
