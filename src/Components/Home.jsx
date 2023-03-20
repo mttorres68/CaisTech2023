@@ -86,11 +86,9 @@ export default function Home() {
                         Edição CaisTech 2019
                     </h2>
                         <p className="text-xl lg:text-1xl xl:text-2xl text-mycolor text-justify font-Inter font-medium">
-                        Manoel Jardim Gomes, mais conhecido como Manoel Gomes (Balsas, 2
-                        de dezembro de 1969), é um cantor e compositor brasileiro de
-                        brega. É conhecido por criar a música "Caneta Azul", que se tornou
-                        um meme da Internet. Manoel Gomes nasceu em Balsas e, desde a
-                        infância, se interessava pela música.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quaerat quod odio officiis ipsum vero cupiditate? Accusamus sint a, porro distinctio aliquid eum repudiandae voluptatibus? Dicta commodi deserunt culpa doloremque!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum omnis quia impedit dicta vero autem nostrum. A ipsa, aliquam, at libero hic, earum impedit qui magnam asperiores natus sit iure.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum unde, molestias facilis tempora voluptates nostrum atque delectus nam possimus ab cum ut consectetur fuga id aperiam aliquid aut minima iure!
                     </p>
                     <div>
                         {/* <h1 className="my-4 ml-4 text-xl lg:text-2xl xl:text-4xl text-white font-bold">
