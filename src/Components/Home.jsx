@@ -34,7 +34,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-6">
                         <button 
-                            className=" border-2 hover:border-[#1fc47a] transform transition hover:scale-110 ease-in-out text-white duration-300 font-bold bg-[#49018c]  px-5 py-2 rounded-full"
+                            className=" border-2 hover:border-white transform transition hover:scale-110 ease-in-out text-white duration-300 font-bold bg-[#49018c]  px-5 py-2 rounded-full"
                         >
                             Inscrever-se
                         </button>
