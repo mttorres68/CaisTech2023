@@ -10,13 +10,13 @@ export default function Home() {
 
     return (
         <div className="justify-center">
-            <header className="bg-[#111024] pt-6 font-poppins">
+            <header className="bg-[#650395] py-4 font-poppins ">
                 <nav className="flex justify-between items-center w-[92%] mx-auto">
                     <div className="w-16 cursor-pointer">
-                        <img src={`${image ? image : "none"}`} alt="" />
+                        <img src={`${image ? image : "CaisTech"}`} alt="" />
                     </div>
                     <div
-                        className={`duration-500 rounded shadow-lg md:static md:min-h-fit absolute min-h-[60vh] left-0 md:w-auto w-full felx items-center px-5
+                        className={`duration-500 rounded md:static md:min-h-fit absolute min-h-[60vh] left-0 md:w-auto w-full felx items-center px-5
                                         ${
                                         navbarOpen
                                             ? "top-[12%] border-separate p-2 bg-gradient-to-t from-[#11203b] to-[#111024]"
@@ -48,9 +48,9 @@ export default function Home() {
         <div className={`${navbarOpen ? "hidden duration-500" : ""} `}>
             <Section idSection={"oevento"} />
             <div className=" mx-5 lg:mx-15 xl:mx-20">
-                <h1 className=" text-2xl lg:text-4xl xl:text-6xl text-white font-bold ">
+                {/* <h1 className=" text-2xl lg:text-4xl xl:text-6xl text-white font-bold ">
                     Edições anteriores
-                </h1>
+                </h1> */}
                 <div className="bg-mycolor h-0.5 rounded-2xl w-[22vh] md:w-[22vh] lg:w-[32vh] xl:w-[52vh] lg xl:h-1.5 mb-2"></div>
 
             </div>

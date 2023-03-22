@@ -9,6 +9,7 @@
     "preview": "vite preview --port 8080"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.4.2",
     "flowbite": "^1.6.4",
     "flowbite-react": "^0.4.2",
     "react": "^18.2.0",
