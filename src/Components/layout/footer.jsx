@@ -3,7 +3,7 @@ import { Typography, IconButton } from "@material-tailwind/react";
 
 const year = new Date().getFullYear();
 
-export function Footer({ title, description, socials, menus, copyright }) {
+export function Footer({ title, description, socials, menus }) {
     return (
         <footer className="relative px-4 pt-8 pb-6">
             <div className="container mx-auto">
@@ -36,8 +36,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                         {menus.map(({ name, items }) => (
                         <div key={name}>
                             <Typography
-                                variant="medium"                                
-                                className="mb-2 block font-medium uppercase text-[#c689ff]"
+                                className="mb-2 block text-md font-medium uppercase text-[#c689ff]"
                             >
                                 {name}
                             </Typography>
@@ -66,9 +65,16 @@ export function Footer({ title, description, socials, menus, copyright }) {
                     <div className="mx-auto w-full px-4 text-center">
                         <Typography
                             variant="small"
-                            className="font-normal text-blue-gray-500"
+                            className="font-normal text-blue-gray-200"
                         >
-                            {copyright}
+                            <div>
+                                CaisTech © {year} {" "}
+                                <span               
+                                    className="text-blue-gray-200 transition-colors"
+                                >
+                                    Direitos Reservados.
+                                </span>
+                        </div>
                         </Typography>
                     </div>
                 </div>
@@ -87,80 +93,29 @@ Footer.defaultProps = {
             name: "facebook",
             path: "https://www.facebook.com/caistech",
         },
-        // {
-        //     color: "light-blue",
-        //     name: "twitter",
-        //     // path: "https://www.twitter.com/creativetim",
-        // },
         {
             color: "purple",
             name: "instagram",
             path: "https://www.instagram.com/caistechflo/",
         },
-        // {
-        //     color: "pink",
-        //     name: "dribbble",
-        //     // path: "https://www.dribbble.com/creativetim",
-        // },
         {
             color: "red",
             name: "youtube",
             path: "https://www.youtube.com/@CaisTech/featured",
         },
-        // {
-        //     color: "black",
-        //     name: "github",
-        //     // path: "https://github.com/creativetimofficial/material-tailwind",
-        // },
     ],
     menus: [
         {
-        name: "Fale conosco",
-        items: [
-                {   name: "Email:  contato@caistech.org", 
-                    // path: "https://www.creative-tim.com/presentation" 
-                },
-                { 
-                    name: "Local:  Instituto Federal do Piauí - IFPI(Campus Floriano)", 
-                    // path: "https://www.creative-tim.com/blog"
-                },
-        ],
-        },
-        // {
-        //     name: "other resources",
-        //     items: [
-        //         {
-        //             name: "MIT License",
-        //             path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
-        //         },
-        //         {
-        //             name: "Contribute",
-        //             path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
-        //         },
-        //         {
-        //             name: "Change Log",
-        //             path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
-        //         },
-        //         {
-        //             name: "Contact Us",
-        //             path: "https://creative-tim.com/contact-us?ref=mtk",
-        //         },
-        //     ],
-        // },
+            name: "Fale conosco",
+            items: [
+                    {   name: "Email:  contato@caistech.org",
+                    },
+                    { 
+                        name: "Local:  Instituto Federal do Piauí - IFPI(Campus Floriano)",
+                    },
+            ],
+        }
     ],
-    copyright: (
-        <>
-            CaisTech © {year} {" "}
-            <a
-                href="https://www.creative-tim.com?ref=mtk"
-                target="_blank"
-                className="text-blue-gray-500 transition-colors hover:text-blue-500"
-            >
-                Direitos Reservados
-            </a>
-        .
-        </>
-    ),
 };
 
 Footer.propTypes = {
@@ -168,7 +123,6 @@ Footer.propTypes = {
     description: PropTypes.string,
     socials: PropTypes.arrayOf(PropTypes.object),
     menus: PropTypes.arrayOf(PropTypes.object),
-    copyright: PropTypes.node,
 };
 
 Footer.displayName = "/src/Components/layout/footer.jsx";

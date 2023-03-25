@@ -9,21 +9,21 @@ import {
     Textarea,
 
 } from "@material-tailwind/react"
-import React, { useState } from "react";
+import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 import {FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
 import {featuresData,teamData } from "@/data"
 import {Footer, PageTitle,} from "@/Components/layout"
 
 
-
+// <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LBn6IWR.png)] bg-cover bg-center" >
 
 export function Home(){
 
     return(
         <>
             <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-            <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LBn6IWR.png)] bg-cover bg-center" >
+            <div className="absolute top-0 h-full w-full bg-cover bg-center" >
                 <VideoCard/>
             </div>
             <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
@@ -52,7 +52,7 @@ export function Home(){
                             key={data}
                             data={data}
                             title={title}
-                            description={description}
+                            // description={description}
                         />
                         ))}
                     </div>
@@ -68,13 +68,13 @@ export function Home(){
                             >
                                 Descrição
                             </Typography>
-                            <Typography className="mb-8 font-normal text-blue-gray-500">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iusto incidunt dolore ex ullam iure voluptatum architecto asperiores vitae officiis eos in natus quibusdam inventore, ducimus dolores repudiandae excepturi similique!
+                            <Typography className="mb-8 font-normal text-blue-gray-700 text-justify">
+                            O Congresso Anual de Informática do Sul do Piauí (Cais Tech 2023) já está com data para acontecer. Nos dias 14, 15 e 16 de Junho, vai acontecer a sexta edição do evento. O Cais Tech é um evento único e enriquecedor para toda a comunidade, no qual tem como objetivo discutir sobre as últimas tendências e avanços do mundo da Tecnologia.                        
                                 <br />
                                 <br />
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam sequi quos, asperiores ipsam officiis doloremque. Doloremque eius consequatur, expedita accusantium nisi aperiam praesentium fugiat iusto recusandae, accusamus tempore in.
+                                Será imperdível! Guarde essa data e fique de olho nas nossas redes sociais para não perder nada.
                             </Typography>
-                            <Button variant="outlined">Saber mais</Button>
+                            {/* <Button variant="outlined">Saber mais</Button> */}
                         </div>
                         <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                             <Card className="shadow-lg shadow-gray-500/10">
@@ -131,9 +131,9 @@ export function Home(){
             <section className="relative bg-blue-gray-100 py-24 px-4">
                 <div className="container mx-auto">
                     <PageTitle heading="Descrição">
-                        <p className="text-gray-900">
+                        <span className="text-gray-900">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsam laborum accusantium, qui eligendi non atque molestiae inventore perferendis quam voluptates vel ipsum dolorum neque deleniti incidunt quidem nisi quibusdam?
-                        </p>
+                        </span>
                     </PageTitle>
                     {/* <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
                         {contactData.map(({ title, icon, description }) => (
@@ -158,9 +158,9 @@ export function Home(){
                         ))}
                     </div> */}
                     <PageTitle heading="Descrição">
-                        <p className="text-gray-900">
+                        <span className="text-gray-900">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste dolor voluptatum labore minima esse. Tempora aperiam autem labore cumque officia sint cum modi velit laborum ipsam? Libero, est dignissimos.
-                        </p>
+                        </span>
                     </PageTitle>
                     {/* <form className="mx-auto mt-12 max-w-3xl text-center">
                         <div className="mb-8 flex gap-8">

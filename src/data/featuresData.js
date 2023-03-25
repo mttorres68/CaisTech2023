@@ -8,7 +8,7 @@ export const featuresData = [
     {
         color: "blue",
         title: "junho",
-        data: "13",
+        data: "14",
         icon: StarIcon,
         description:"Descrição",
     
@@ -16,7 +16,7 @@ export const featuresData = [
     {
         color: "red",
         title: "junho",
-        data: "14",
+        data: "15",
         icon: ArrowPathIcon,
         description:"Descrição",
 
@@ -24,7 +24,7 @@ export const featuresData = [
     {
         color: "teal",
         title: "junho",
-        data: "15",
+        data: "16",
         icon: FingerPrintIcon,
         description:"Descrição",
     
