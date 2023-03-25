@@ -9,9 +9,9 @@ import {
     Textarea,
 
 } from "@material-tailwind/react"
-import React from "react";
+import React, { useState } from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-import {FeatureCard, TeamCard} from "@/Components/cards";
+import {FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
 import {featuresData,teamData } from "@/data"
 import {Footer, PageTitle,} from "@/Components/layout"
 
@@ -23,9 +23,11 @@ export function Home(){
     return(
         <>
             <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-            <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LBn6IWR.png)] bg-cover bg-center" />
+            <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LBn6IWR.png)] bg-cover bg-center" >
+                <VideoCard/>
+            </div>
             <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
-                <div className="max-w-8xl container relative mx-auto">
+                <div className="max-w-8xl container relative mx-auto hidden">
                     <div className="flex flex-wrap items-center">
                         <div className="ml-auto mr-auto w-full px-4  lg:w-8/12">
                             <Typography
