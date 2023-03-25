@@ -12,7 +12,7 @@ export function VideoCard() {
                     className="absolute top-0 left-0 z-0 w-full h-full object-cover"
                 >
                     <source 
-                        src="public/video/Teste-animacao-final.mp4" 
+                        src="public/video/animacaoCaisTech.mp4" 
                         type="video/mp4" 
                     />
                 </video>
