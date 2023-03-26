@@ -13,12 +13,14 @@ import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 import {FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
 import {featuresData,teamData } from "@/data"
-import {Footer, PageTitle,} from "@/Components/layout"
+import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
+import PropTypes from "prop-types";
+
 
 
 // <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LBn6IWR.png)] bg-cover bg-center" >
 
-export function Home(){
+export function Home({socials}){
 
     return(
         <>
@@ -75,26 +77,44 @@ export function Home(){
                                 Será imperdível! Guarde essa data e fique de olho nas nossas redes sociais para não perder nada.
                             </Typography>
                             {/* <Button variant="outlined">Saber mais</Button> */}
+                            <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
+                                {socials.map(({ color, name, path }) => (
+                                    <a
+                                        key={name}
+                                        href={path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                    <IconButton color="white" className="rounded-full">
+                                        <Typography color={color}>
+                                            <i className={`fa-brands fa-${name}`} />
+                                        </Typography>
+                                    </IconButton>
+                                    </a>
+                                ))}
+                        </div>
                         </div>
                         <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                             <Card className="shadow-lg shadow-gray-500/10">
                                 <CardHeader className="relative h-56">
-                                    <img
+                                    {/* <img
                                         alt="Card Image"
                                         src="/img/teamwork.jpeg"
                                         className="h-full w-full"
-                                    />
-                                </CardHeader>
-                                <CardBody>
+                                    /> */}
                                     <Typography
                                         variant="h5"
                                         color="blue-gray"
                                         className="mb-3 font-bold"
                                     >
-                                        Descrição
+                                        Edições anteriores
                                     </Typography>
+                                    <Carrosel/>
+                                </CardHeader>
+                                <CardBody>
+                                    
                                     <Typography className="font-normal text-blue-gray-500">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut eaque voluptates porro, et accusamus dolorem tenetur laboriosam sequi? Quaerat quibusdam sit maxime cumque fugiat eius architecto, animi facere delectus illo!
+                                    O nosso evento de tecnologia tem uma história de sucesso e evolução ao longo dos anos. Desde a sua primeira edição, em 2017, temos trabalhado duro para trazer o melhor conteúdo e experiência para os nossos participantes
                                     </Typography>
                                 </CardBody>
                             </Card>
@@ -128,10 +148,10 @@ export function Home(){
                     </div>
                 </div>
             </section>
-            <section className="relative bg-blue-gray-100 py-24 px-4">
+            <section className="relative bg-blue-gray-200 py-24 px-4">
                 <div className="container mx-auto">
                     <PageTitle heading="Descrição">
-                        <span className="text-gray-900">
+                        <span className="text-gray-600">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsam laborum accusantium, qui eligendi non atque molestiae inventore perferendis quam voluptates vel ipsum dolorum neque deleniti incidunt quidem nisi quibusdam?
                         </span>
                     </PageTitle>
@@ -158,7 +178,7 @@ export function Home(){
                         ))}
                     </div> */}
                     <PageTitle heading="Descrição">
-                        <span className="text-gray-900">
+                        <span className="text-gray-600">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste dolor voluptatum labore minima esse. Tempora aperiam autem labore cumque officia sint cum modi velit laborum ipsam? Libero, est dignissimos.
                         </span>
                     </PageTitle>
@@ -180,5 +200,34 @@ export function Home(){
         </>
     )
 }
+
+Home.defaultProps = {
+    title: "CaisTech 2023",
+    description:
+        "Acesse nossas redes sociais.",
+    socials: [
+        {
+            color: "blue",
+            name: "facebook",
+            path: "https://www.facebook.com/caistech",
+        },
+        {
+            color: "purple",
+            name: "instagram",
+            path: "https://www.instagram.com/caistechflo/",
+        },
+        {
+            color: "red",
+            name: "youtube",
+            path: "https://www.youtube.com/@CaisTech/featured",
+        },
+    ],
+}
+
+Home.propTypes = {
+    socials: PropTypes.arrayOf(PropTypes.object),
+};
+
+Home.displayName = "src/pages/home.jsx";
 
 export default Home;
