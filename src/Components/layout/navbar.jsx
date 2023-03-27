@@ -28,34 +28,34 @@ export function Navbar({brandName, routes, action}){
                 <Typography
                     key={name}
                     as="li"
-                    variant="small"
+                    variant="lead"
                     color="inherit"
                     className="capitalize link-underline"
                 >
-                {href ? (
-                    <a
-                        href={href}
-                        target={target}
-                        className="flex items-center gap-1 p-1 font-normal"
-                    >
-                    {icon &&
+                    {href ? (
+                        <a
+                            href={href}
+                            target={target}
+                            className="flex items-center gap-1 p-1 font-normal"
+                        >
+                        {icon &&
+                                React.createElement(icon, {
+                                    className: "w-[18px] h-[18px] opacity-75 mr-1",
+                                })}
+                            {name}
+                        </a>
+                    ) : (
+                        <a
+                            href={href}                        
+                            className="flex items-center gap-1 p-1 font-normal"
+                        >
+                        {icon &&
                             React.createElement(icon, {
-                                className: "w-[18px] h-[18px] opacity-75 mr-1",
+                            className: "w-[18px] h-[18px] opacity-75 mr-1",
                             })}
-                        {name}
-                    </a>
-                ) : (
-                    <a
-                        href={href}                        
-                        className="flex items-center gap-1 p-1 font-normal"
-                    >
-                    {icon &&
-                        React.createElement(icon, {
-                        className: "w-[18px] h-[18px] opacity-75 mr-1",
-                        })}
-                        {name}
-                    </a>
-                )}
+                            {name}
+                        </a>
+                    )}
                 </Typography>
             ))}
     </ul>
@@ -63,7 +63,7 @@ export function Navbar({brandName, routes, action}){
 
     return (
         <NavBarMt color="transparent" className="p-3 w-screen">
-            <div className="container mx-auto flex items-center justify-between text-white">
+            <div className="container mx-auto flex items-center justify-between text-white ">
                 <Link to="/">
                     <Typography className=" w-16 cursor-pointer">
                         <img src="https://i.imgur.com/a8cF8aj.png" />
@@ -71,14 +71,14 @@ export function Navbar({brandName, routes, action}){
                     </Typography>
                 </Link>
                 <div className="hidden lg:block">{navList}</div>
-                <div className="hidden gap-2 lg:flex">
+                <div className="hidden gap-2 lg:flex mr-4">
                     {React.cloneElement(action, {
                         className: "hidden lg:inline-block",
                     })}
                 </div>
                 <IconButton
                     variant="text"
-                    size="sm"
+                    size="lead"
                     color="white"
                     className="ml-auto text-inherit hover:bg-transparent hover:text-green-500 focus:bg-transparent active:bg-transparent lg:hidden "
                     onClick={() => setOpenNav(!openNav)}
@@ -91,7 +91,7 @@ export function Navbar({brandName, routes, action}){
                 </IconButton>
             </div>
             <MobileNav
-                className="rounded-xl bg-gray-300 px-4 pt-2 pb-4 text-blue-gray-900"
+                className="rounded-xl bg-gray-300 px-4 pt-2 pb-4 text-blue-gray-900 lg:hidden"
                 open={openNav}
             >
                 <div className="container mx-auto">
@@ -116,12 +116,12 @@ Navbar.defaultProps = {
             <Button
                 id="buttomIns"
                 color="purple" 
+                className="text-sm"
                 style={{
                     color:"white",
-                    
                 }} 
                 // variant="outlined" 
-                size="sm" 
+                size="md" 
                 fullWidth
             >
                 Inscrever-se
