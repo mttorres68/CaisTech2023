@@ -62,11 +62,12 @@ export function Navbar({brandName, routes, action}){
     )
 
     return (
-        <NavBarMt color="transparent" className="p-3">
+        <NavBarMt color="transparent" className="p-3 w-screen">
             <div className="container mx-auto flex items-center justify-between text-white">
                 <Link to="/">
-                    <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
-                        {brandName}
+                    <Typography className=" w-16 cursor-pointer">
+                        <img src="https://i.imgur.com/a8cF8aj.png" />
+                        {/* {brandName} */}
                     </Typography>
                 </Link>
                 <div className="hidden lg:block">{navList}</div>
@@ -79,7 +80,7 @@ export function Navbar({brandName, routes, action}){
                     variant="text"
                     size="sm"
                     color="white"
-                    className="ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                    className="ml-auto text-inherit hover:bg-transparent hover:text-green-500 focus:bg-transparent active:bg-transparent lg:hidden "
                     onClick={() => setOpenNav(!openNav)}
                 >
                     {openNav ? (
@@ -90,7 +91,7 @@ export function Navbar({brandName, routes, action}){
                 </IconButton>
             </div>
             <MobileNav
-                className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
+                className="rounded-xl bg-gray-300 px-4 pt-2 pb-4 text-blue-gray-900"
                 open={openNav}
             >
                 <div className="container mx-auto">
@@ -110,7 +111,7 @@ Navbar.defaultProps = {
         <a
             href=""
             target=""
-            className="hover:bg-purple-100 "
+            className="hover:bg-purple-100 hover:outline-offset-2"
         >
             <Button
                 id="buttomIns"
@@ -119,7 +120,7 @@ Navbar.defaultProps = {
                     color:"white",
                     
                 }} 
-                variant="outlined" 
+                // variant="outlined" 
                 size="sm" 
                 fullWidth
             >

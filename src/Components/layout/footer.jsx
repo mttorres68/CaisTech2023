@@ -32,7 +32,7 @@ export function Footer({ title, description, socials, menus }) {
                             ))}
                         </div>
                     </div>
-                    <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
+                    <div id="contato" className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
                         {menus.map(({ name, items }) => (
                         <div key={name}>
                             <Typography
