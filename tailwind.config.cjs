@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const typography = require('@tailwindcss/typography')
 const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: [
@@ -12,6 +13,7 @@ module.exports = withMT({
         Inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         Kameron: ["Kameron", "sans-serif"],
+        origin_tech: ['OriginTech', 'sans-serif'],
       },
 
       backgroundImage: {
@@ -26,6 +28,9 @@ module.exports = withMT({
     },
   },
   plugins: [
+    typography({
+      fontFamily: ['origin_tech']
+    }),
     require("flowbite/plugin"),
     require("tailwind-typewriter")({
       wordsets: {

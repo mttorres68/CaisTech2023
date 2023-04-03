@@ -15,6 +15,9 @@ import {FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
 import {featuresData,teamData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 
@@ -71,7 +74,7 @@ export function Home({socials}){
                                 Descrição
                             </Typography>
                             <Typography className="mb-8 font-normal text-blue-gray-700 text-justify">
-                            O Congresso Anual de Informática do Sul do Piauí (Cais Tech 2023) já está com data para acontecer. Nos dias 14, 15 e 16 de Junho, vai acontecer a sexta edição do evento. O Cais Tech é um evento único e enriquecedor para toda a comunidade, no qual tem como objetivo discutir sobre as últimas tendências e avanços do mundo da Tecnologia.                        
+                                O Congresso Anual de Informática do Sul do Piauí (Cais Tech 2023) já está com data para acontecer. Nos dias 14, 15 e 16 de Junho, correrá a sexta edição do evento. O Cais Tech é um evento único e enriquecedor para toda a comunidade, no qual tem como objetivo discutir sobre as últimas tendências e avanços do mundo da Tecnologia.                        
                                 <br />
                                 <br />
                                 Será imperdível! Guarde essa data e fique de olho nas nossas redes sociais para não perder nada.

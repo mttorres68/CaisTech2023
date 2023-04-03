@@ -23,14 +23,14 @@ export function Navbar({brandName, routes, action}){
 
 
     const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className=" mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             {routesLink.map(({ name, path, icon, href, target }) => (
                 <Typography
                     key={name}
                     as="li"
                     variant="lead"
                     color="inherit"
-                    className="capitalize link-underline"
+                    className="capitalize link-underline originFont"
                 >
                     {href ? (
                         <a
@@ -111,15 +111,14 @@ Navbar.defaultProps = {
         <a
             href=""
             target=""
-            className="hover:bg-purple-100 hover:outline-offset-2"
+            className=""
         >
             <Button
-                id="buttomIns"
-                color="purple" 
-                className="text-sm"
-                style={{
-                    color:"white",
-                }} 
+                id=""
+                // color="purple"
+                className="text-sm bg-[#1fc47a] text-gray-600 hover:text-white originFont"
+
+                
                 // variant="outlined" 
                 size="md" 
                 fullWidth

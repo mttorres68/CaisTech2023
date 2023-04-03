@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@200;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Kameron:wght@400;700&family=Poppins:wght@200;400;600&display=swap');
+
+@font-face {
+    font-family: 'OringTech';
+    src: url('./fonts/origin_tech/OriginTechpersonaluse.ttf') format('truetype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+.originFont{
+    font-family: 'OringTech', sans-serif;
+}
 
 body {
     -webkit-font-smoothing: antialiased;
