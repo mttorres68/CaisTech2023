@@ -11,13 +11,10 @@ import {
 } from "@material-tailwind/react"
 import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-import {FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
-import {featuresData,teamData } from "@/data"
+import {CourseCard, FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
+import {featuresData,teamData, courseData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 
 
 
@@ -25,11 +22,13 @@ import 'aos/dist/aos.css';
 
 export function Home({socials}){
 
+
     return(
         <>
             <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
             <div className="absolute top-0 h-full w-full bg-cover bg-center" >
                 <VideoCard/>
+                
             </div>
             <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto hidden">
@@ -49,7 +48,7 @@ export function Home({socials}){
                     </div>
                 </div>
             </div>
-            <section id="evento" className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+            <section id="programacao" className="-mt-32 bg-blue-gray-200 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {featuresData.map(({ color, title, icon, description, data }) => (
@@ -61,20 +60,20 @@ export function Home({socials}){
                         />
                         ))}
                     </div>
-                    <div className="mt-32 flex flex-wrap items-center">
-                        <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-                            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
+                    <div  className="mt-32 flex flex-wrap items-center">
+                        <div  className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+                            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-100 p-3 text-center shadow-lg">
                                 <RocketLaunchIcon className="h-6 w-6 text-blue-gray-900" />
                             </div>
                             <Typography
                                 variant="h3"
-                                className="mb-3 font-bold"
+                                className="mb-3 font-bold text-blue-gray-900 originFont"
                                 color="blue-gray"
                             >
-                                Descrição
+                                CaisTech 2023
                             </Typography>
-                            <Typography className="mb-8 font-normal text-blue-gray-700 text-justify">
-                                O Congresso Anual de Informática do Sul do Piauí (Cais Tech 2023) já está com data para acontecer. Nos dias 14, 15 e 16 de Junho, correrá a sexta edição do evento. O Cais Tech é um evento único e enriquecedor para toda a comunidade, no qual tem como objetivo discutir sobre as últimas tendências e avanços do mundo da Tecnologia.                        
+                            <Typography className="mb-8 font-normal text-blue-gray-800 text-justify ">
+                                O Congresso Anual de Informática do Sul do Piauí (Cais Tech 2023) já está com data para acontecer. Nos dias 31 de maio, 1 e 2 de Junho, correrá a sexta edição do evento. O Cais Tech é um evento único e enriquecedor para toda a comunidade, no qual tem como objetivo discutir sobre as últimas tendências e avanços do mundo da Tecnologia.                        
                                 <br />
                                 <br />
                                 Será imperdível! Guarde essa data e fique de olho nas nossas redes sociais para não perder nada.
@@ -88,7 +87,7 @@ export function Home({socials}){
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                    <IconButton color="white" className="rounded-full">
+                                    <IconButton className="bg-blue-gray-50 rounded-full">
                                         <Typography color={color}>
                                             <i className={`fa-brands fa-${name}`} />
                                         </Typography>
@@ -98,17 +97,11 @@ export function Home({socials}){
                         </div>
                         </div>
                         <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
-                            <Card className="shadow-lg shadow-gray-500/10">
-                                <CardHeader className="relative h-56">
-                                    {/* <img
-                                        alt="Card Image"
-                                        src="/img/teamwork.jpeg"
-                                        className="h-full w-full"
-                                    /> */}
+                            <Card className="shadow-lg shadow-gray-500/10 bg-blue-gray-100">
+                                <CardHeader className="relative h-56 mt-2">
                                     <Typography
                                         variant="h5"
-                                        color="blue-gray"
-                                        className="mb-3 font-bold"
+                                        className="bg-blue-gray-100 p-2 font-bold originFont"
                                     >
                                         Edições anteriores
                                     </Typography>
@@ -116,7 +109,7 @@ export function Home({socials}){
                                 </CardHeader>
                                 <CardBody>
                                     
-                                    <Typography className="font-normal text-blue-gray-500">
+                                    <Typography className="font-normal text-gray-800 ">
                                     O nosso evento de tecnologia tem uma história de sucesso e evolução ao longo dos anos. Desde a sua primeira edição, em 2017, temos trabalhado duro para trazer o melhor conteúdo e experiência para os nossos participantes
                                     </Typography>
                                 </CardBody>
@@ -125,12 +118,12 @@ export function Home({socials}){
                     </div>
                 </div>
             </section>
-            <section id="palestra" className="px-4 pt-20 pb-48">
-                <div className="container mx-auto">
+            <section  id="palestra" className="px-4 pt-20 pb-20">
+                <div  className="container mx-auto">
                     <PageTitle heading="Palestrantes">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis autem repudiandae corporis dignissimos nesciunt minus dolorem magnam eligendi, deleniti beatae, assumenda modi sapiente doloremque voluptatum reprehenderit est tempora placeat quia.
                     </PageTitle>
-                    <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+                    <div  className="mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
                         {teamData.map(({ img, name, position, socials, index }) => (
                             <TeamCard
                                 key={index}
@@ -140,61 +133,39 @@ export function Home({socials}){
                                 socials={
                                     <div className="flex items-center gap-2">
                                         {socials.map(({ color, name, index }) => (
-                                        <IconButton key={index} color={color} variant="text">
-                                            <i className={`fa-brands text-lg  fa-${name}`} />
-                                        </IconButton>
-                                    ))}
-                                </div>
+                                            <IconButton key={index} color={color} variant="text">
+                                                <i className={`fa-brands text-lg  fa-${name}`} />
+                                            </IconButton>
+                                        ))}
+                                    </div>
                                 }
                             />
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="relative bg-blue-gray-200 py-24 px-4">
+            <section id="minicursos"  className=" bg-blue-gray-200 py-10 pb-20">
                 <div className="container mx-auto">
-                    <PageTitle heading="Descrição">
-                        <span className="text-gray-600">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsam laborum accusantium, qui eligendi non atque molestiae inventore perferendis quam voluptates vel ipsum dolorum neque deleniti incidunt quidem nisi quibusdam?
+                    <PageTitle title="Minicursos/Oficinas">
+                        <span className="text-gray-600 originFont">
+                            QUEM IRÁ MINISTRAR
                         </span>
                     </PageTitle>
-                    {/* <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-                        {contactData.map(({ title, icon, description }) => (
-                            <Card
-                                key={title}
-                                color="transparent"
-                                shadow={false}
-                                className="text-center text-blue-gray-900"
-                            >
-                                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
-                                    {React.createElement(icon, {
-                                        className: "w-5 h-5",
-                                    })}
-                                </div>
-                                <Typography variant="h5" color="blue-gray" className="mb-2">
-                                    {title}
-                                </Typography>
-                                <Typography className="font-normal text-blue-gray-500">
-                                    {description}
-                                </Typography>
-                            </Card>
+                    <div className="mt-12 grid grid-cols-1 gap-12 gap-x-4 md:grid-cols-2 xl:grid-cols-3">
+                        {courseData.map(({img, autor, title, descricao, dia, local, index}) => (
+                            <CourseCard 
+                                key={index}
+                                img={img}
+                                autor={autor}
+                                title={title}
+                                descricao={descricao}
+                                dia={dia}
+                                local={local}
+                            />
                         ))}
-                    </div> */}
-                    <PageTitle heading="Descrição">
-                        <span className="text-gray-600">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iste dolor voluptatum labore minima esse. Tempora aperiam autem labore cumque officia sint cum modi velit laborum ipsam? Libero, est dignissimos.
-                        </span>
-                    </PageTitle>
-                    {/* <form className="mx-auto mt-12 max-w-3xl text-center">
-                        <div className="mb-8 flex gap-8">
-                        <Input variant="standard" size="lg" label="Full Name" />
-                        <Input variant="standard" size="lg" label="Email Address" />
-                        </div>
-                        <Textarea variant="standard" size="lg" label="Message" rows={8} />
-                        <Button variant="gradient" size="lg" className="mt-8">
-                        Send Message
-                        </Button>
-                    </form> */}
+
+                    </div>
+
                 </div>
             </section>
             <div className="bg-blue-gray-900">

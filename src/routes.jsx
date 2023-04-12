@@ -27,11 +27,15 @@ export const routes = [{
         name: "CONTATO",
         path:"contato",
     },
+    ,{
+        name: "EDIÇÕES ANTERIORES",
+        // path:"https://caistechflo.netlify.app/",
+    },
 ];
 
 export default routes;
 export const routesLink = [ {
-        name: "O EVENTO",
+        name: "",
         path: "/home",
         element: <Home />,
         href:"#evento"
@@ -54,4 +58,9 @@ export const routesLink = [ {
         href: "#contato",        
         element: "",
     },
+    {
+        name: "CAIS TECH 2022",
+        href: "https://caistechflo.netlify.app/",
+        target: "__blanck"
+    }
 ];

@@ -11,6 +11,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.bgCard{
+    background:linear-gradient(355deg, rgb(42, 15, 83), rgb(38, 32, 143), rgb(87, 47, 184))
+}
+
+.bgImage {
+    background-image: url("public/img/Hexagon.svg");
+}
 
 .originFont{
     font-family: 'OringTech', sans-serif;

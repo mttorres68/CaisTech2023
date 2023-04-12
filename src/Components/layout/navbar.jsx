@@ -116,7 +116,7 @@ Navbar.defaultProps = {
             <Button
                 id=""
                 // color="purple"
-                className="text-sm bg-[#1fc47a] text-gray-600 hover:text-white originFont"
+                className="text-sm bg-[#3e008a] text-white hover:text-white originFont"
 
                 
                 // variant="outlined" 

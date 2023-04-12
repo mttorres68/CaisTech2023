@@ -7,8 +7,8 @@ import {
 export const featuresData = [
     {
         color: "blue",
-        title: "junho",
-        data: "14",
+        title: "Maio",
+        data: "31",
         icon: StarIcon,
         description:"Descrição",
     
@@ -16,7 +16,7 @@ export const featuresData = [
     {
         color: "red",
         title: "junho",
-        data: "15",
+        data: "01",
         icon: ArrowPathIcon,
         description:"Descrição",
 
@@ -24,7 +24,7 @@ export const featuresData = [
     {
         color: "teal",
         title: "junho",
-        data: "16",
+        data: "02",
         icon: FingerPrintIcon,
         description:"Descrição",
     
