@@ -11,10 +11,12 @@ import {
 } from "@material-tailwind/react"
 import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-import {CourseCard, FeatureCard, TeamCard, VideoCard} from "@/Components/cards";
+import {CourseCard, FeatureCard, TeamCard, VideoCard, SpeakersCard} from "@/Components/cards";
 import {featuresData,teamData, courseData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { speakersData } from "@/data/speakersData";
 
 
 
@@ -48,6 +50,7 @@ export function Home({socials}){
                     </div>
                 </div>
             </div>
+
             <section id="programacao" className="-mt-32 bg-blue-gray-200 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -109,8 +112,8 @@ export function Home({socials}){
                                 </CardHeader>
                                 <CardBody>
                                     
-                                    <Typography className="font-normal text-gray-800 ">
-                                    O nosso evento de tecnologia tem uma história de sucesso e evolução ao longo dos anos. Desde a sua primeira edição, em 2017, temos trabalhado duro para trazer o melhor conteúdo e experiência para os nossos participantes
+                                    <Typography className="font-normal text-gray-800 text-justify">
+                                        O Cais Tech tem uma história de sucesso e evolução. É um evento realizado anualmente, pelo IFPI - Campus Floriano, e - desde 2017, contou com a participação de palestrantes do Brasil e dos Estados Unidos, proporcionando o melhor conteúdo e experiência para os participantes.
                                     </Typography>
                                 </CardBody>
                             </Card>
@@ -118,12 +121,86 @@ export function Home({socials}){
                     </div>
                 </div>
             </section>
-            <section  id="palestra" className="px-4 pt-20 pb-20">
-                <div  className="container mx-auto">
-                    <PageTitle heading="Palestrantes">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis autem repudiandae corporis dignissimos nesciunt minus dolorem magnam eligendi, deleniti beatae, assumenda modi sapiente doloremque voluptatum reprehenderit est tempora placeat quia.
+
+            <section id="palestra" className="px-4 pt-20 pb-20">
+                <div  className="container mx-auto justify-start">
+                    <PageTitle heading="Palestrantes Confirmados"/>
+                    
+                    <div  className="mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-1 xl:grid-cols-1">
+                        {speakersData.map(({img,name, position,redesSocial, curriculo, index}) =>(
+                            <SpeakersCard
+                                key={index}
+                                img={img}
+                                name={name}
+                                position={position}
+                                curriculo={
+                                    <div>
+                                        {curriculo.map(({formacao}) => (
+                                            <li>
+                                                {formacao}
+                                            </li>
+                                        ))}
+                                    </div>
+                                }
+                                redesSocial={
+                                    <div className="flex items-center gap-2">
+                                        {redesSocial.map(({color, name, path, index}) => (
+                                            <a 
+                                                key={index}
+                                                href={path}
+                                                target="_blank"
+                                            >
+                                                <IconButton
+                                                    color={color}
+                                                    variant="text"
+                                                >
+                                                    <i className={`fa-brands text-lg  fa-${name}`} />
+                                                </IconButton>
+                                            </a>
+                                        ))}
+                                    </div>
+                                }
+                            />
+                        ))}
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="minicursos"  className=" bg-blue-gray-200 py-10 pb-20">
+                <div className="container mx-auto">
+                    <PageTitle title="Minicursos/Oficinas">
+                        <span className="text-gray-600  originFont">
+                            {/* QUEM IRÁ MINISTRAR */}
+                            <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-900"/>
+                        </span>
                     </PageTitle>
-                    <div  className="mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+                    <div className="mt-12 grid grid-cols-1 gap-12 gap-x-16 md:grid-cols-2 xl:grid-cols-3 hidden">
+                        {courseData.map(({img, autor, title, descricao, dia, local, index}) => (
+                            <CourseCard 
+                                key={index}
+                                img={img}
+                                autor={autor}
+                                title={title}
+                                descricao={descricao}
+                                dia={dia}
+                                local={local}
+                            />
+                        ))}
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section  id="patrocinadores" className="px-4 pt-20 pb-20">
+                <div  className="container mx-auto">
+                    <PageTitle heading="Patrocinadores">
+                        <span className="text-gray-600  originFont">
+                                <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
+                        </span>
+                    </PageTitle>
+                    <div  className="hidden mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
                         {teamData.map(({ img, name, position, socials, index }) => (
                             <TeamCard
                                 key={index}
@@ -144,30 +221,7 @@ export function Home({socials}){
                     </div>
                 </div>
             </section>
-            <section id="minicursos"  className=" bg-blue-gray-200 py-10 pb-20">
-                <div className="container mx-auto">
-                    <PageTitle title="Minicursos/Oficinas">
-                        <span className="text-gray-600 originFont">
-                            QUEM IRÁ MINISTRAR
-                        </span>
-                    </PageTitle>
-                    <div className="mt-12 grid grid-cols-1 gap-12 gap-x-4 md:grid-cols-2 xl:grid-cols-3">
-                        {courseData.map(({img, autor, title, descricao, dia, local, index}) => (
-                            <CourseCard 
-                                key={index}
-                                img={img}
-                                autor={autor}
-                                title={title}
-                                descricao={descricao}
-                                dia={dia}
-                                local={local}
-                            />
-                        ))}
 
-                    </div>
-
-                </div>
-            </section>
             <div className="bg-blue-gray-900">
                 <Footer />
             </div>
@@ -180,11 +234,6 @@ Home.defaultProps = {
     description:
         "Acesse nossas redes sociais.",
     socials: [
-        {
-            color: "blue",
-            name: "facebook",
-            path: "https://www.facebook.com/caistech",
-        },
         {
             color: "purple",
             name: "instagram",
@@ -200,6 +249,7 @@ Home.defaultProps = {
 
 Home.propTypes = {
     socials: PropTypes.arrayOf(PropTypes.object),
+    
 };
 
 Home.displayName = "src/pages/home.jsx";

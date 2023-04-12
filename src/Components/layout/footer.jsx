@@ -89,11 +89,6 @@ Footer.defaultProps = {
         "Acesse nossas redes sociais.",
     socials: [
         {
-            color: "blue",
-            name: "facebook",
-            path: "https://www.facebook.com/caistech",
-        },
-        {
             color: "purple",
             name: "instagram",
             path: "https://www.instagram.com/caistechflo/",
