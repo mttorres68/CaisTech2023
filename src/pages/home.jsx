@@ -15,7 +15,6 @@ import {CourseCard, FeatureCard, TeamCard, VideoCard, SpeakersCard} from "@/Comp
 import {featuresData,teamData, courseData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { speakersData } from "@/data/speakersData";
 
 
@@ -55,12 +54,12 @@ export function Home({socials}){
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {featuresData.map(({ color, title, icon, description, data }) => (
-                        <FeatureCard
-                            key={data}
-                            data={data}
-                            title={title}
-                            // description={description}
-                        />
+                            <FeatureCard
+                                key={data}
+                                data={data}
+                                title={title}
+                                // description={description}
+                            />
                         ))}
                     </div>
                     <div  className="mt-32 flex flex-wrap items-center">
@@ -127,12 +126,12 @@ export function Home({socials}){
                     <PageTitle heading="Palestrantes Confirmados"/>
                     
                     <div  className="mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-1 xl:grid-cols-1">
-                        {speakersData.map(({img,name, position,redesSocial, curriculo, index}) =>(
+                        {speakersData.map(({img,name, tema,redesSocial, curriculo, index}) =>(
                             <SpeakersCard
                                 key={index}
                                 img={img}
                                 name={name}
-                                position={position}
+                                tema={tema}
                                 curriculo={
                                     <div>
                                         {curriculo.map(({formacao}) => (
@@ -144,18 +143,23 @@ export function Home({socials}){
                                 }
                                 redesSocial={
                                     <div className="flex items-center gap-2">
-                                        {redesSocial.map(({color, name, path, index}) => (
+                                        {redesSocial.map(({color, name, path, social, index}) => (
                                             <a 
                                                 key={index}
                                                 href={path}
                                                 target="_blank"
+                                                className="flex"
                                             >
                                                 <IconButton
                                                     color={color}
                                                     variant="text"
+                                                    className="flex flex-row"
                                                 >
                                                     <i className={`fa-brands text-lg  fa-${name}`} />
                                                 </IconButton>
+                                                    <span className={`flex mt-2 text-${color}-500`}>
+                                                        {social}
+                                                    </span>
                                             </a>
                                         ))}
                                     </div>
@@ -175,7 +179,7 @@ export function Home({socials}){
                             <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-900"/>
                         </span>
                     </PageTitle>
-                    <div className="mt-12 grid grid-cols-1 gap-12 gap-x-16 md:grid-cols-2 xl:grid-cols-3 hidden">
+                    <div className="mt-12 grid grid-cols-1 gap-12 gap-x-16 md:grid-cols-2 xl:grid-cols-3">
                         {courseData.map(({img, autor, title, descricao, dia, local, index}) => (
                             <CourseCard 
                                 key={index}
@@ -183,8 +187,17 @@ export function Home({socials}){
                                 autor={autor}
                                 title={title}
                                 descricao={descricao}
-                                dia={dia}
                                 local={local}
+                                dia={
+                                    <div>
+                                        {dia.map(({dia, index}) => (
+                                            <span key={index} className="flex gap-1">
+                                                <i class="fas fa-duotone fa-calendar-days mt-[2px]"/>
+                                                {dia}
+                                            </span>
+                                        ))}
+                                    </div>
+                                }
                             />
                         ))}
 

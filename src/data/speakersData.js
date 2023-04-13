@@ -2,7 +2,7 @@ export const speakersData = [
     {
         img: "/img/Pedro.jpeg",
         name: "Pedro Alexandre",        
-        position: "Palestrante",
+        tema: "A importância da Análise de Dados para melhorar a experiência do cliente.",
         curriculo: [
             {
                 formacao: "Administrador"
@@ -28,12 +28,21 @@ export const speakersData = [
             {
                 color: "red",
                 name: "instagram",
-                path: "https://www.instagram.com/pa_cabral/"
+                path: "https://www.instagram.com/pa_cabral/",
+                social: "pa_cabral"
             },
             {
                 color: "blue",
                 name: "reply",
+                path:"",
+                social: "pedroale@pedroale.com"
+            }, {
+                color: "green",
+                name: "whatsapp",
+                path:"",
+                social: "(89) 9 99419-2555"
             },
+
         ],
     },
 ]

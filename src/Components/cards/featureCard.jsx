@@ -22,6 +22,9 @@ export function FeatureCard({ icon, title, description, data }) {
                 <Typography className="prose lg:prose-xl originFont text-blue-gray-200">
                     {description}
                 </Typography>
+                <span className="text-gray-600  originFont">
+                    <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
+                </span>
             </CardBody>
         </Card>
     );

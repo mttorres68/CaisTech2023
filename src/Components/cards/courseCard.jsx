@@ -14,10 +14,13 @@ export function CourseCard({img, autor, title, descricao, dia, local, position})
                 />
             </CardHeader>
             <CardBody className="text-justify">
-                <h1 className="text-white text-2xl font-semibold absolute -top-[-28vh] sm:-top-[-250px] md:-top-[-250px] lg:-top-[-250px]">
-                    {autor}
-                </h1>
-                <Typography variant="h5" className="mt-4 text-[#1fc47a]">
+                <div className="-top-[-250px] bg-[#1F1135] rounded-md w-[22vh] pb-2 pl-2 pt-1 opacity-80 absolute h-10">
+                    <h1 className="text-white text-2xl font-semibold ">
+                        {autor}
+                        {/* absolute -top-[-28vh] sm:-top-[-250px] md:-top-[-250px] lg:-top-[-250px] */}
+                    </h1>
+                </div>
+                <Typography variant="h5" className="mt-4 text-[#1fc47a] uppercase">
                     {title}
                 </Typography>                
                 <Typography className="text-white">
@@ -25,11 +28,12 @@ export function CourseCard({img, autor, title, descricao, dia, local, position})
                 </Typography>
             </CardBody>
             <CardFooter divider className="flex items-center justify-between py-3 text-gray-300">
-                <Typography variant="small" className="flex gap-1">
-                    <i class="fas fa-duotone fa-calendar-days mt-[2px]"/>
-                    {dia}
-                </Typography>                
-                <Typography variant="small" className="flex gap-1">
+                {dia &&
+                    <Typography variant="small" className="flex gap-1">                        
+                        {dia}
+                    </Typography>
+                }
+                <Typography variant="small" className="flex">
                     <i className="fas fa-map-marker-alt fa-sm fa-flip mt-[9px]" />
                     {local}
                 </Typography>
@@ -45,8 +49,8 @@ CourseCard.propTypes = {
     autor: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     descricao: PropTypes.string.isRequired,
-    dia: PropTypes.string.isRequired,
     local: PropTypes.string.isRequired,
+    dia: PropTypes.node,
 }
 
 CourseCard.displayName = "/src/Components/layout/courseCard.jsx";

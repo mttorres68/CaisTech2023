@@ -1,32 +1,17 @@
 export const courseData = [
     {
-        img:"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_aws.jpg",
-        autor:"Fulano de Tal",
-        title:"DEPLOY DE UMA API REST COM NODEJS",
+        img:"https://www.interop.com.br/wp-content/uploads/2019/04/power-BI.png",
+        autor:"Pedro Alexandre",
+        title:"Uma abordagem prática com análise de dados reais.",
         descricao:"O minicurso tem como objetivo ensinar a manipulação de APIs utilizando Node JS, Banco de dados relacional e publicar a aplicação em uma hospedagem real.",
-        dia:"Dia 01 Junho",
-        local:" Laboratório 03"
-    },{
-        img:"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_aws.jpg",
-        autor:"Fulano de Tal",
-        title:"DEPLOY DE UMA API REST COM NODEJS",
-        descricao:"O minicurso tem como objetivo ensinar a manipulação de APIs utilizando Node JS, Banco de dados relacional e publicar a aplicação em uma hospedagem real.",
-        dia:"Dia 01 Junho",
-        local:" Laboratório 03"
-    },{
-        img:"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_aws.jpg",
-        autor:"Fulano de Tal",
-        title:"DEPLOY DE UMA API REST COM NODEJS",
-        descricao:"O minicurso tem como objetivo ensinar a manipulação de APIs utilizando Node JS, Banco de dados relacional e publicar a aplicação em uma hospedagem real.",
-        dia:"Dia 01 Junho",
-        local:" Laboratório 03"
-    },{
-        img:"https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_aws.jpg",
-        autor:"Fulano de Tal",
-        title:"DEPLOY DE UMA API REST COM NODEJS",
-        descricao:"O minicurso tem como objetivo ensinar a manipulação de APIs utilizando Node JS, Banco de dados relacional e publicar a aplicação em uma hospedagem real.",
-        dia:"Dia 01 Junho",
-        local:" Laboratório 03"
+        dia:[
+            {
+                dia: "01/06, das 9h às 12h (quinta-feira)"
+            },{
+                dia: "02/06, das 9h às 12h (sexta-feira)"
+            }
+        ],
+        local:"Lab03"
     },
 ]
 
