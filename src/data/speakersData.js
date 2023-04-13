@@ -36,12 +36,7 @@ export const speakersData = [
                 name: "reply",
                 path:"",
                 social: "pedroale@pedroale.com"
-            }, {
-                color: "green",
-                name: "whatsapp",
-                path:"",
-                social: "(89) 9 99419-2555"
-            },
+            }, 
 
         ],
     },

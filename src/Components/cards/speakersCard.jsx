@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export function SpeakersCard({img, name, tema, curriculo, redesSocial}){
 
     return(
-        <div className="rounded-md overflow-hidden shadow-gray-600 transition ease-in-out hover:-translate-y-5 hover:scale-100 duration-300">
+        <div className="rounded-md overflow-hidden shadow-gray-600 transition ease-in-out hover:-translate-y-5 hover:scale-100 duration-300 cursor-default">
             <div className=" sm:flex md:flex lg:flex xl:flex justify-center text-blue-gray-50">
                 <img
                     className="items-center ml-8 h-80 w-72 md:w-[20rem] lg:w-[20rem] rounded-md"

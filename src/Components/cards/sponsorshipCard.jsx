@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Card, Avatar, Typography } from "@material-tailwind/react";
 
-export function TeamCard({ img, name, position, socials }) {
+export function SponsorshipCard({ img, name, position, socials, nameColor }) {
     return (
         <Card color="transparent" shadow={false} className="text-center">
             <Avatar
@@ -14,7 +14,7 @@ export function TeamCard({ img, name, position, socials }) {
                 {name}
             </Typography>
             {position && (
-                <Typography className="font-normal text-blue-gray-300 originFont">
+                <Typography color={nameColor} className="font-normal originFont">
                 {position}
                 </Typography>
             )}
@@ -23,18 +23,18 @@ export function TeamCard({ img, name, position, socials }) {
     );
     }
 
-TeamCard.defaultProps = {
+SponsorshipCard.defaultProps = {
     position: "",
     socials: null,
 };
 
-TeamCard.propTypes = {
+SponsorshipCard.propTypes = {
     img: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     position: PropTypes.string,
     socials: PropTypes.node,
 };
 
-TeamCard.displayName = "/src/Components/layout/teamCard.jsx";
+SponsorshipCard.displayName = "/src/Components/layout/SponsorshipCard.jsx";
 
-export default TeamCard;
+export default SponsorshipCard;

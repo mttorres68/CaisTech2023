@@ -16,6 +16,10 @@ module.exports = withMT({
         origin_tech: ['OriginTech', 'sans-serif'],
       },
 
+      colors: {
+        'caistech-500': '#4500BD'
+      },
+
       backgroundImage: {
         "caisTech-grandient":
           "linear-gradient(59.86deg, #9572FC 10.00%, #43E7AD 40.00%, #E1D55D 66%, #d1cc96 98.30%)",

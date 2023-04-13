@@ -11,11 +11,11 @@ import {
 } from "@material-tailwind/react"
 import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-import {CourseCard, FeatureCard, TeamCard, VideoCard, SpeakersCard} from "@/Components/cards";
-import {featuresData,teamData, courseData } from "@/data"
+import {CourseCard, FeatureCard, SponsorshipCard, VideoCard, SpeakersCard} from "@/Components/cards";
+import {featuresData,sponsorshipData, courseData, speakersData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
-import { speakersData } from "@/data/speakersData";
+// import { speakersData } from "@/data/speakersData";
 
 
 
@@ -89,11 +89,11 @@ export function Home({socials}){
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                    <IconButton className="bg-blue-gray-50 rounded-full">
-                                        <Typography color={color}>
-                                            <i className={`fa-brands fa-${name}`} />
-                                        </Typography>
-                                    </IconButton>
+                                        <IconButton className="bg-blue-gray-50 rounded-full">
+                                            <Typography color={color}>
+                                                <i className={`fa-brands fa-${name}`} />
+                                            </Typography>
+                                        </IconButton>
                                     </a>
                                 ))}
                         </div>
@@ -124,7 +124,7 @@ export function Home({socials}){
             <section id="palestra" className="px-4 pt-20 pb-20">
                 <div  className="container mx-auto justify-start">
                     <PageTitle heading="Palestrantes Confirmados">
-                        <span className="text-gray-600  originFont">
+                        <span className="text-gray-600  originFont justify-center flex">
                             <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
                         </span>
                     </PageTitle>
@@ -177,8 +177,22 @@ export function Home({socials}){
 
             <section id="minicursos"  className=" bg-blue-gray-200 py-10 pb-20">
                 <div className="container mx-auto">
-                    <PageTitle title="Minicursos/Oficinas">
-                        <span className="text-gray-600  originFont">
+                    <PageTitle 
+                        title="Minicursos/Oficinas"
+                        titleMinicurso="QUER MINISTRAR UM MINICURSO/OFICINA NO NOSSO EVENTO?"
+                    >
+                        <a 
+                            className="flex justify-center w-full"
+                            href="https://forms.gle/w4ziLxT1rBZ5aTko6"
+                            target="_blank"
+                        >
+                            <span 
+                                className="bg-[#1fc47a] text-white rounded-md p-2 hover:shadow-md hover:shadow-gray-300 transition ease-in-out hover:-translate-y-2 hover:scale-y-110 duration-300"
+                            >
+                                PARTICIPAR AGORA
+                            </span>
+                        </a>
+                        <span className="text-gray-600  originFont flex justify-center mt-6">
                             {/* QUEM IRÁ MINISTRAR */}
                             <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-900"/>
                         </span>
@@ -206,23 +220,37 @@ export function Home({socials}){
                         ))}
 
                     </div>
-
                 </div>
             </section>
 
-            <section  id="patrocinadores" className="px-4 pt-20 pb-20">
+            <section id="patrocinadores" className="px-4 pt-20 pb-20">
                 <div  className="container mx-auto">
-                    <PageTitle heading="Patrocinadores">
-                        <span className="text-gray-600  originFont">
+                    <PageTitle 
+                        heading="Patrocinadores"
+                        titlePatrocino="DESEJA PATROCINAR O EVENTO?"
+                    >
+                        <a 
+                            className="flex justify-center w-full"
+                            href="https://api.whatsapp.com/send?phone=89994409955"
+                            target="_blank"
+                        >
+                            <span 
+                                className="bg-[#1fc47a] text-white rounded-md p-2 hover:shadow-md hover:shadow-gray-300 transition ease-in-out hover:-translate-y-2 hover:scale-y-110 duration-300"
+                            >
+                                SEJA NOSSO PATROCINADOR
+                            </span>
+                        </a>
+                        <span className="text-gray-600  originFont justify-center flex mt-6">
                                 <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
                         </span>
                     </PageTitle>
-                    <div  className="hidden mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-                        {teamData.map(({ img, name, position, socials, index }) => (
-                            <TeamCard
+                    <div  className=" mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+                        {sponsorshipData.map(({ img, name, position, socials, nameColor, index }) => (
+                            <SponsorshipCard
                                 key={index}
                                 img={img}
                                 name={name}
+                                nameColor={nameColor}
                                 position={position}
                                 socials={
                                     <div className="flex items-center gap-2">
