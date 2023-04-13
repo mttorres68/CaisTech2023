@@ -123,7 +123,11 @@ export function Home({socials}){
 
             <section id="palestra" className="px-4 pt-20 pb-20">
                 <div  className="container mx-auto justify-start">
-                    <PageTitle heading="Palestrantes Confirmados"/>
+                    <PageTitle heading="Palestrantes Confirmados">
+                        <span className="text-gray-600  originFont">
+                            <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
+                        </span>
+                    </PageTitle>
                     
                     <div  className="mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-1 xl:grid-cols-1">
                         {speakersData.map(({img,name, tema,redesSocial, curriculo, index}) =>(
