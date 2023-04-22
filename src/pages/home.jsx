@@ -15,6 +15,7 @@ import {CourseCard, FeatureCard, SponsorshipCard, VideoCard, SpeakersCard} from 
 import {featuresData,sponsorshipData, courseData, speakersData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
+import ParticleBackground from "@/Components/particlesBackground/particleBackgrouns";
 // import { speakersData } from "@/data/speakersData";
 
 
@@ -28,10 +29,11 @@ export function Home({socials}){
         <>
             <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
             <div className="absolute top-0 h-full w-full bg-cover bg-center" >
-                <VideoCard/>
-                
+                {/* <VideoCard/> */}
+                {/* <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LDYHZBb.png)] bg-cover bg-center text-white text-3xl" ></div> */}
+                <ParticleBackground/>
             </div>
-            <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
+            <div className="absolute top-0 h-full w-full bg-black/20 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto hidden">
                     <div className="flex flex-wrap items-center">
                         <div className="ml-auto mr-auto w-full px-4  lg:w-8/12">
@@ -50,7 +52,7 @@ export function Home({socials}){
                 </div>
             </div>
 
-            <section id="programacao" className="-mt-32 bg-blue-gray-200 px-4 pb-20 pt-4">
+            <section id="programacao" className="-mt-32 bg-tech-60 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {featuresData.map(({ color, title, icon, description, data }) => (
@@ -175,7 +177,7 @@ export function Home({socials}){
                 </div>
             </section>
 
-            <section id="minicursos"  className=" bg-blue-gray-200 py-10 pb-20">
+            <section id="minicursos"  className=" bg-ctech-900 py-10 pb-20">
                 <div className="container mx-auto">
                     <PageTitle 
                         title="Minicursos/Oficinas"

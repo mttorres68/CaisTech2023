@@ -28,15 +28,15 @@ export function Navbar({brandName, routes, action}){
                 <Typography
                     key={name}
                     as="li"
-                    variant="lead"
+                    // variant="lead"
                     color="inherit"
-                    className="capitalize link-underline originFont"
+                    className="uppercase link-underline font-monsserrat font-extrabold text-xl"
                 >
                     {href ? (
                         <a
                             href={href}
                             target={target}
-                            className="flex items-center gap-1 p-1 font-normal"
+                            className="flex items-center gap-1 p-1"
                         >
                         {icon &&
                                 React.createElement(icon, {
@@ -47,7 +47,7 @@ export function Navbar({brandName, routes, action}){
                     ) : (
                         <a
                             href={href}                        
-                            className="flex items-center gap-1 p-1 font-normal"
+                            className="flex items-center gap-1 p-1"
                         >
                         {icon &&
                             React.createElement(icon, {
@@ -116,7 +116,7 @@ Navbar.defaultProps = {
             <Button
                 id=""
                 // color="purple"
-                className="text-sm bg-[#1fc47a] text-white hover:text-blue-gray-700 originFont"
+                className="text-sm bg-[#1fc47a] text-white hover:text-blue-gray-700 font-monsserrat font-extrabold"
 
                 
                 // variant="outlined" 
