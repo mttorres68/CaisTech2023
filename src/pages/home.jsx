@@ -11,7 +11,7 @@ import {
 } from "@material-tailwind/react"
 import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-import {CourseCard, FeatureCard, SponsorshipCard, VideoCard, SpeakersCard} from "@/Components/cards";
+import {CourseCard, FeatureCard, SponsorshipCard, VideoCard, SpeakersCard, DoubtCard} from "@/Components/cards";
 import {featuresData,sponsorshipData, courseData, speakersData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
@@ -22,7 +22,7 @@ import ParticleBackground from "@/Components/particlesBackground/particleBackgro
 
 // <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LBn6IWR.png)] bg-cover bg-center" >
 
-export function Home({socials}){
+export function Home({socialsctech}){
 
 
     return(
@@ -57,7 +57,7 @@ export function Home({socials}){
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {featuresData.map(({ color, title, icon, description, data }) => (
                             <FeatureCard
-                                key={data}
+                                key={`key-2${data}`}
                                 data={data}
                                 title={title}
                                 // description={description}
@@ -84,9 +84,9 @@ export function Home({socials}){
                             </Typography>
                             {/* <Button variant="outlined">Saber mais</Button> */}
                             <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
-                                {socials.map(({ color, name, path }) => (
+                                {socialsctech.map(({ color, name, path, index }) => (
                                     <a
-                                        key={name}
+                                        key={`key-2${name}`}
                                         href={path}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -123,25 +123,25 @@ export function Home({socials}){
                 </div>
             </section>
 
-            <section id="palestra" className="px-4 pt-20 pb-20">
+            <section id="palestra" className="bg-ctech-900 px-4 pt-20 pb-20">
                 <div  className="container mx-auto justify-start">
                     <PageTitle heading="Palestrantes Confirmados">
                         <span className="text-gray-600  originFont justify-center flex">
-                            <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
+                            <i className="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
                         </span>
                     </PageTitle>
                     
                     <div  className="mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-1 xl:grid-cols-1">
                         {speakersData.map(({img,name, tema,redesSocial, curriculo, index}) =>(
                             <SpeakersCard
-                                key={index}
+                                key={`key-1${name}`}
                                 img={img}
                                 name={name}
                                 tema={tema}
                                 curriculo={
                                     <div>
                                         {curriculo.map(({formacao}) => (
-                                            <li>
+                                            <li key={formacao}>
                                                 {formacao}
                                             </li>
                                         ))}
@@ -151,7 +151,7 @@ export function Home({socials}){
                                     <div className="flex items-center gap-2">
                                         {redesSocial.map(({color, name, path, social, index}) => (
                                             <a 
-                                                key={index}
+                                                key={`key-${name}`}
                                                 href={path}
                                                 target="_blank"
                                                 className="flex"
@@ -177,7 +177,7 @@ export function Home({socials}){
                 </div>
             </section>
 
-            <section id="minicursos"  className=" bg-ctech-900 py-10 pb-20">
+            <section id="minicursos"  className=" bg-tech-60 py-10 pb-20">
                 <div className="container mx-auto">
                     <PageTitle 
                         title="Minicursos/Oficinas"
@@ -196,13 +196,13 @@ export function Home({socials}){
                         </a>
                         <span className="text-gray-600  originFont flex justify-center mt-6">
                             {/* QUEM IRÁ MINISTRAR */}
-                            <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-900"/>
+                            <i className="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-900"/>
                         </span>
                     </PageTitle>
                     <div className="mt-12 grid grid-cols-1 gap-12 gap-x-16 md:grid-cols-2 xl:grid-cols-3">
                         {courseData.map(({img, autor, title, descricao, dia, local, index}) => (
                             <CourseCard 
-                                key={index}
+                                key={`key-4${autor}`}
                                 img={img}
                                 autor={autor}
                                 title={title}
@@ -211,8 +211,8 @@ export function Home({socials}){
                                 dia={
                                     <div>
                                         {dia.map(({dia, index}) => (
-                                            <span key={index} className="flex gap-1">
-                                                <i class="fas fa-duotone fa-calendar-days mt-[2px]"/>
+                                            <span key={`key-5${dia}`} className="flex gap-1">
+                                                <i className="fas fa-duotone fa-calendar-days mt-[2px]"/>
                                                 {dia}
                                             </span>
                                         ))}
@@ -225,7 +225,7 @@ export function Home({socials}){
                 </div>
             </section>
 
-            <section id="patrocinadores" className="px-4 pt-20 pb-20">
+            <section id="patrocinadores" className="bg-ctech-900 px-4 pt-20 pb-20">
                 <div  className="container mx-auto">
                     <PageTitle 
                         heading="Patrocinadores"
@@ -243,13 +243,13 @@ export function Home({socials}){
                             </span>
                         </a>
                         <span className="text-gray-600  originFont justify-center flex mt-6">
-                                <i class="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
+                                <i className="fas fa-solid fa-spinner fa-spin text-7xl text-blue-gray-50"/>
                         </span>
                     </PageTitle>
                     <div  className=" mt-12 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
                         {sponsorshipData.map(({ img, name, position, socials, nameColor, index }) => (
                             <SponsorshipCard
-                                key={index}
+                                key={`key-2${name}`}
                                 img={img}
                                 name={name}
                                 nameColor={nameColor}
@@ -257,7 +257,7 @@ export function Home({socials}){
                                 socials={
                                     <div className="flex items-center gap-2">
                                         {socials.map(({ color, name, index }) => (
-                                            <IconButton key={index} color={color} variant="text">
+                                            <IconButton  key={`key-3${color}`} color={color} variant="text">
                                                 <i className={`fa-brands text-lg  fa-${name}`} />
                                             </IconButton>
                                         ))}
@@ -265,6 +265,17 @@ export function Home({socials}){
                                 }
                             />
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            <section id="duvidas" className="bg-tech-60 py-10 pb-20">
+                <div className="container mx-auto">
+                    {/* <DoubtCard /> */}
+                    <div className="card">
+                        <h1>
+                            card
+                        </h1>
                     </div>
                 </div>
             </section>
@@ -280,7 +291,7 @@ Home.defaultProps = {
     title: "CaisTech 2023",
     description:
         "Acesse nossas redes sociais.",
-    socials: [
+    socialsctech: [
         {
             color: "purple",
             name: "instagram",

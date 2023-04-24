@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="container bg-ctech-200 border-2  opacity-80 left-[50%] rounded-xl z-10 mx-auto mt-2 -translate-x-2/4 p-2 fixed">
+      <div className="container bg-ctech-200 border-2  opacity-90 left-[50%] rounded-xl z-10 mx-auto mt-2 -translate-x-2/4 p-2 fixed">
         <Navbar routes={routes}/>
       </div>
       <Routes>

@@ -63,8 +63,7 @@ export function Footer({ title, description, socials, menus }) {
                 <hr className="my-6 border-gray-300" />
                 <div className="flex flex-wrap items-center justify-center md:justify-between">
                     <div className="mx-auto w-full px-4 text-center">
-                        <Typography
-                            variant="small"
+                        <div
                             className="font-normal text-blue-gray-200"
                         >
                             <div>
@@ -75,7 +74,7 @@ export function Footer({ title, description, socials, menus }) {
                                     Direitos Reservados.
                                 </span>
                         </div>
-                        </Typography>
+                        </div>
                     </div>
                 </div>
             </div>

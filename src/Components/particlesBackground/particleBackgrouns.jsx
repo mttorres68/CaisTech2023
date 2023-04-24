@@ -4,10 +4,6 @@ import { loadFull } from "tsparticles";
 
 const ParticleBackground = () => {
     const particlesInit = useCallback(async engine => {
-        console.log(engine);
-        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(engine);
     }, []);
 
@@ -23,6 +19,7 @@ const ParticleBackground = () => {
             options={{
                 background: {
                     image:"https://i.imgur.com/LDYHZBb.png",
+                    
                 },
                 fullScreen:{
                     enable: true,
@@ -37,13 +34,17 @@ const ParticleBackground = () => {
                     events: {
                         onClick: {
                             enable: true,
-                            mode: "bubble",
+                            mode: "repulse",
                         },
                         onHover: {
                             enable: true,
                             mode: "grab",
+                            parallax: 10,
                         },
-                        resize: true,
+                        resize:{
+                            enable: true,
+                            delay: 4,
+                        } 
                     },
                     modes: {
                         grab: {
@@ -51,8 +52,8 @@ const ParticleBackground = () => {
                             quantity: 4,
                         },
                         repulse: {
-                            distance: 200,
-                            duration: 0.4,
+                            distance: 400,
+                            duration: 0.8,
                         },
                     },
                 },
@@ -71,13 +72,13 @@ const ParticleBackground = () => {
                         enable: true,
                     },
                     move: {
-                        direction: "bottom-left",
+                        direction: "none",
                         enable: true,
                         outModes: {
                             default: "bounce",
                         },
                         random: true,
-                        speed: 2,
+                        speed: 0.9,
                         straight: true,
                     },
                     number: {

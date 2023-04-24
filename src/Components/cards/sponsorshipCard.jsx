@@ -8,20 +8,20 @@ export function SponsorshipCard({ img, name, position, socials, nameColor }) {
                 src={img}
                 alt={name}
                 size="xxl"
-                className="h-full w-full shadow-lg shadow-gray-500/25 originFont"
+                className="h-full w-full shadow-lg shadow-gray-700/20"
             />
-            <Typography variant="h5" color="white" className="mt-6 mb-1 originFont">
+            <Typography variant="h4" color="white" className="mt-6 mb-1 font-monsserrat ">
                 {name}
             </Typography>
             {position && (
-                <Typography color={nameColor} className="font-normal originFont">
+                <Typography color={nameColor} className="font-normal font-monsserrat text-xl">
                 {position}
                 </Typography>
             )}
             {socials && <div className="mx-auto mt-5">{socials}</div>}
         </Card>
     );
-    }
+}
 
 SponsorshipCard.defaultProps = {
     position: "",

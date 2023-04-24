@@ -11,10 +11,6 @@ module.exports = withMT({
     extend: {
       fontFamily: {
         monsserrat: ['Montserrat', 'sans-serif'],
-        Inter: ['Inter', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        Kameron: ['Kameron', 'sans-serif'],
-        origin_tech: ['OriginTech', 'sans-serif'],
       },
 
       colors: {
@@ -37,6 +33,7 @@ module.exports = withMT({
       },
 
       backgroundImage: {
+        'ctech': "url('https://i.imgur.com/LDYHZBb.png')",
         "caisTech-grandient": "linear-gradient(59.86deg, #9572FC 10.00%, #43E7AD 40.00%, #E1D55D 66%, #d1cc96 98.30%)",
         "background-grandient":"linear-gradient(90deg, rgba(42,35,101,1) 49%, rgb(42,45,110,1) 68%)",
         'ctech-gradient': 'radial-gradient(circle,  #0D004A 49%, #0039B2 90%)',

@@ -8,10 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --port 8080"
   },
-  "files": [
-    "particles.js",
-    "particles.min.js"
-  ],
+
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
