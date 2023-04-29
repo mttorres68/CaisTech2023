@@ -8,7 +8,7 @@ import {
 
 export function FeatureCard({ title, description, data }) {
     return (
-        <Card className="rounded-2xl shadow-lg shadow-gray-500/10 bg-ctech-550 glass-effect border-2 cardFeature">
+        <Card className="rounded-2xl shadow-lg shadow-gray-500/10 bg-ctech-550 glass-effect border-2">
             <CardBody className="px-8 text-center">
                 <IconButton                    
                     size="lg"

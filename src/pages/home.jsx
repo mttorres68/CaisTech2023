@@ -11,7 +11,15 @@ import {
 } from "@material-tailwind/react"
 import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-import {CourseCard, FeatureCard, SponsorshipCard, VideoCard, SpeakersCard, DoubtCard} from "@/Components/cards";
+import {
+    CourseCard, 
+    FeatureCard, 
+    SponsorshipCard, 
+    VideoCard, 
+    SpeakersCard, 
+    DoubtCard,
+    CardSpeaker
+} from "@/Components/cards";
 import {featuresData,sponsorshipData, courseData, speakersData } from "@/data"
 import {Carrosel, Footer, PageTitle,} from "@/Components/layout"
 import PropTypes from "prop-types";
@@ -31,7 +39,7 @@ export function Home({socialsctech}){
             <div className="absolute top-0 h-full w-full bg-cover bg-center" >
                 {/* <VideoCard/> */}
                 {/* <div className="absolute top-0 h-full w-full bg-[url(https://i.imgur.com/LDYHZBb.png)] bg-cover bg-center text-white text-3xl" ></div> */}
-                <ParticleBackground/>
+                {/* <ParticleBackground/> */}
             </div>
             <div className="absolute top-0 h-full w-full bg-black/20 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto hidden">
@@ -271,13 +279,15 @@ export function Home({socialsctech}){
 
             <section id="duvidas" className="bg-tech-60 py-10 pb-20">
                 <div className="container mx-auto">
+                    <CardSpeaker/>
                     {/* <DoubtCard /> */}
-                    <div className="card">
+                    {/* <div className="card">
                         <h1>
                             card
                         </h1>
-                    </div>
+                    </div> */}
                 </div>
+
             </section>
 
             <div className="bg-blue-gray-900">
