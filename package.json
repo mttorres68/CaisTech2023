@@ -1,42 +1,21 @@
 {
-  "name": "caistech2023",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "caistech-2023",
+  "version": "1.0.0",
+  "description": "caistech ifpi 2023",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 8080"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mttorres68/CaisTech2023.git"
+  },
+  "author": "vitorss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mttorres68/CaisTech2023/issues"
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@heroicons/react": "^2.0.16",
-    "@material-tailwind/react": "^1.4.2",
-    "flowbite": "^1.6.4",
-    "flowbite-react": "^0.4.2",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "react-particles": "^2.9.3",
-    "react-router-dom": "^6.9.0",
-    "tailwind-typewriter": "^1.0.1",
-    "tsparticles": "^2.9.3",
-    "tsparticles-engine": "^2.9.3"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "tsconfig-paths": "^4.1.2",
-    "vite": "^4.1.0"
+    "boxicons": "^2.0.5"
   }
 }

@@ -2,19 +2,1765 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.ico" />
+    <meta http-equiv="Content-Language" content="pt" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/index.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="/src/assets/favicon.ico" />
     <title>Cais Tech 2023 | Online</title>
+
+    <meta name="author" content="Cais Tech 2022 - Trilhas a Seguir" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:site_name" content="Cais Tech 2022 | Online" />
+    <meta property="og:type" content="events.event" />
+    <meta property="og:title" content="Cais Tech 2022 | Online" />
+    <meta property="og:url" content="http://caistech.online" />
+    <meta name="og:author" content="Cais Tech 2023" />
   </head>
-  <body class="bg-ctech bg-no-repeat h-screen bg-cover">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+  <body>
+    <main>
+      <!-- section navigation bar -->
+      <section class="navigation" id="navbar">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <a href="https://caistechflo.netlify.app/"
+                ><img src="/src/assets/brand.png" alt="CaisTech"
+              /></a>
+            </div>
+            <div class="navbar-menu">
+              <ul>
+                <li><a href="#about">O Evento</a></li>
+                <li><a href="#speaker">Palestras</a></li>
+                <li><a href="#courses">Minicursos</a></li>
+                <li><a href="#programs">Programação</a></li>
+                <li><a href="#questions">Duvidas</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li>
+                  <a
+                    href="https://forms.gle/Eo1T4NmUWR2i9JWw7"
+                    class="btn-ticket"
+                    target="_blank"
+                    >Inscreva-se</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="menu-toggle" onclick="openNav()">
+              <!-- <div></div>
+              <div></div>
+              <div></div> -->
+              <i class="bx bx-menu"></i>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <!-- section wrapper -->
+      <div id="cover"></div>
+      <header class="wrapper" id="wrapper">
+        <div class="container">
+          <div class="content-area">
+            <div class="content-area-wrapper">
+              <span>Sejam Bem-vindos ao</span>
+              <h1 class="t-1">CAISTECH 2023</h1>
+              <h6>O maior evento de tecnologia do Sul do Piauí.</h6>
+              <div class="buttons">
+                <a
+                  class="btn btn-main"
+                  href="https://wa.me/5589994639144"
+                  target="_blank"
+                  >Fale conosco</a
+                >
+                <a class="btn btn-main" href="#about">Sobre o evento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <li><a href="#about" onclick="closeNav()">O Evento</a></li>
+          <li><a href="#speaker" onclick="closeNav()">Palestrantes</a></li>
+          <li><a href="#courses" onclick="closeNav()">Minicursos</a></li>
+          <li><a href="#programs" onclick="closeNav()">Programação</a></li>
+          <li><a href="#questions" onclick="closeNav()">Perguntas</a></li>
+          <li><a href="#contact" onclick="closeNav()">Contato</a></li>
+          <li>
+            <a href="" target="_blank" class="btn-ticket">Inscreva-se</a>
+          </li>
+        </div>
+      </header>
+
+      <section class="event-register">
+        <div class="container">
+          <div class="register-content">
+            <div class="row">
+              <div class="title-register">
+                <span>inscrições</span>
+                <h2>Saiba como se inscrever</h2>
+              </div>
+            </div>
+            <div class="row register-video padding-bottom-56px">
+              <iframe
+                src="https://www.youtube.com/embed/YA3wi6UDeTM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section event counter -->
+      <!-- <section class="event-counter">
+        <div class="container">
+          <div class="content-event">
+            <div class="event-counter-info">
+              <h2>CaisTech 2022</h2>
+              <h5>De 04 a 06 de Julho, 2022</h5>
+              <a
+                href="https://www.google.com/maps/place/Instituto+Federal+de+Educação,+Ciência+e+Tecnologia+do+Piauí+-+Campus+Floriano/@-6.7886773,-43.0454953,17z/data=!3m1!4b1!4m5!3m4!1s0x7837ce957b790cb:0xd0da9c79db163198!8m2!3d-6.7886826!4d-43.0433066"
+                target="_blank"
+                style="text-decoration: none"
+              >
+                <p>
+                  <i class="bx bxs-map" style="color: #22da87"></i>No IFPI
+                  Campus Floriano
+                </p>
+              </a>
+              <a
+                href="https://www.youtube.com/caistech"
+                target="_blank"
+                style="text-decoration: none"
+              >
+                <p>
+                  <i class="bx bxl-youtube" style="color: #ff0000"></i>Através
+                  do Youtube do CaisTech.
+                </p>
+              </a>
+            </div>
+            <div class="event-counter-timer">
+              <div class="counter-box">
+                <h3 class="time"><span id="days"></span></h3>
+                <span class="text">Dias</span>
+              </div>
+              <div class="counter-box">
+                <h3 class="time"><span id="hours"></span></h3>
+                <span class="text">Horas</span>
+              </div>
+              <div class="counter-box">
+                <h3 class="time"><span id="minutes"></span></h3>
+                <span class="text">Minutos</span>
+              </div>
+              <div class="counter-box">
+                <h3 class="time"><span id="seconds"></span></h3>
+                <span class="text">Segundos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- section about -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="content-about">
+            <div class="row about-col">
+              <div class="col-md col-lg col-sm mr-5">
+                <div class="about-img">
+                  <img
+                    src="/src/assets/cover-about.jpeg"
+                    alt="CaisTech - Floriano"
+                  />
+                </div>
+              </div>
+              <div class="col-md col-lg col-sm">
+                <div class="about-info">
+                  <span>Sobre nós</span>
+                  <h2>O Evento</h2>
+                  <p>
+                    O Cais Tech - Congresso Anual de Informática do Sul do Piauí
+                    é um evento de tecnologia organizado pelo IFPI, Campus
+                    Floriano, que ocorre anualmente e traz o que há de mais
+                    inovador na área.
+                  </p>
+                  <p>
+                    A quinta edição do evento está planejada para acontecer de
+                    forma híbrida nos dias 04 a 06 de Julho de 2022, com a
+                    temática "Trilhas a Seguir”.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section speakers -->
+      <section class="speaker" id="speaker">
+        <div class="container">
+          <div class="content-speaker">
+            <div class="row">
+              <div class="title-speaker">
+                <span>Palestras</span>
+                <h2>Quem irá palestrar</h2>
+              </div>
+            </div>
+            <div class="row mb-5 d-flex justify-content-between card-speaker">
+              <div class="col-md-5 col-lg-5 speaker-img">
+                <img
+                  src="/src/assets/palestrantes/ricardo.webp"
+                  alt="palestrante"
+                />
+              </div>
+              <div class="col-md-7 pt-4 info-speaker">
+                <h2>Ricardo Martins Ramos</h2>
+                <div class="bio-speaker">
+                  <span>A Bioinformática na luta contra a COVID-19</span>
+                  <p>
+                    Possui graduação em Ciência da Computação pela Universidade
+                    Federal do Piauí (1997), mestrado em Ciência da Computação
+                    pela Universidade Federal de Pernambuco (2002), área de
+                    pesquisa Banco de Dados, e doutorado em Genética e
+                    Toxicologia Aplicada, linha de pesquisa Bioinformática
+                    Estrutural, pela Universidade Luterana do Brasil (ULBRA) -
+                    Rio Grande do Sul (2012). Professor Titular do Instituto
+                    Federal de Educação, Ciência e Tecnologia do Piauí (IFPI).
+                    Coordenador do Curso de Tecnologia em Análise e
+                    Desenvolvimento de Sistemas do Campus Teresina Central do
+                    IFPI. Líder do Laboratório de Pesquisa em Sistemas de
+                    Informação (LaPeSI) desenvolvendo pesquisas em Computação
+                    Aplicada à Biotecnologia. Revisor de vários periódicos
+                    internacionais. Professor colaborador de Programas de
+                    Pós-graduação na Universidade Estadual e Universidade
+                    Federal do Piauí. Membro da Academia de Ciências do Piauí.
+                  </p>
+                  <div class="speaker-links">
+                    <h6>Redes Sociais</h6>
+                    <div class="d-flex links">
+                      <a href="" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                      </a>
+                      <a href="" target="_blank">
+                        <i class="bx bxl-github"></i>
+                      </a>
+                      <a href="" target="_blank">
+                        <i class="bx bxl-facebook"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row mb-5 d-flex justify-content-between card-speaker a-1 grid"
+            >
+              <div class="col-md-7 pt-4 pr-5 info-speaker s-1 infos">
+                <h2>Valeska Uchôa</h2>
+                <div class="bio-speaker b-2">
+                  <span>Roda de Conversa com as Pyladies THE</span>
+                  <p>
+                    Desenvolvedora Machine Learning no Instituto de Pesquisas
+                    Eldorado, Mestra em Ciência da Computação pela Universidade
+                    Federal do Piauí e Doutoranda em Informática na Universidade
+                    de Brasília. Tem vasta experiência em Processamento Digital
+                    de Imagens e Visão Computacional.
+                  </p>
+                  <div class="speaker-links">
+                    <h6>Redes Sociais</h6>
+                    <div class="d-flex links">
+                      <a href="" target="_blank"
+                        ><i class="bx bxl-instagram"></i
+                      ></a>
+                      <a href="" target="_blank"
+                        ><i class="bx bxl-linkedin"></i
+                      ></a>
+                      <a href="" target="_blank"
+                        ><i class="bx bxl-facebook"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-lg-5 speaker-img s-2 img">
+                <img
+                  src="/src/assets/palestrantes/Valeska Uchôa - Palestra PyLadies THE.webp"
+                  alt="palestrante"
+                />
+              </div>
+            </div>
+            <div class="row mb-5 d-flex justify-content-between card-speaker">
+              <div class="col-md-5 col-lg-5 speaker-img">
+                <img
+                  src="/src/assets/palestrantes/Karoline Farias - Palestra PyLadies THE.webp"
+                  alt="palestrante"
+                />
+              </div>
+              <div class="col-md-7 pt-4 info-speaker">
+                <h2>Karoline Farias</h2>
+                <div class="bio-speaker">
+                  <span>Roda de Conversa com as Pyladies THE</span>
+                  <p>
+                    Organizadora da Pyladies Teresina desde 2020,
+                    vice-coordenadora do time de podcast da comunidade
+                    StartCoding, atualmente trabalha como Pesquisadora na
+                    empresa Maida Health, onde atua gerenciando e desenvolvendo
+                    projetos de inteligência artificial para gestão em saúde.
+                  </p>
+                  <div class="speaker-links">
+                    <h6>Redes Sociais</h6>
+                    <div class="d-flex links">
+                      <a href="" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                      </a>
+                      <a href="" target="_blank">
+                        <i class="bx bxl-github"></i>
+                      </a>
+                      <a href="" target="_blank">
+                        <i class="bx bxl-facebook"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row mb-5 d-flex justify-content-between card-speaker a-1 grid"
+            >
+              <div class="col-md-7 pt-4 pr-5 info-speaker s-1 infos">
+                <h2>Gabrielle Rodrigues</h2>
+                <div class="bio-speaker b-2">
+                  <span>Trabalhando em Tech - como é e por onde começar?</span>
+                  <p>
+                    Atua como Engenheira de Dados no iFood e é fundadora da
+                    Edumi, uma startup de impacto social que capacita jovens
+                    para o mercado de tecnologia e cria pontes entre os dois. É
+                    fellow ProLíder e apaixonada por causas sociais.
+                  </p>
+                  <div class="speaker-links">
+                    <h6>Redes Sociais</h6>
+                    <div class="d-flex links">
+                      <a href="" target="_blank"
+                        ><i class="bx bxl-instagram"></i
+                      ></a>
+                      <a href="" target="_blank"
+                        ><i class="bx bxl-linkedin"></i
+                      ></a>
+                      <a href="" target="_blank"
+                        ><i class="bx bxl-facebook"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-lg-5 speaker-img s-2 img">
+                <img
+                  src="/src/assets/palestrantes/Gabrielle Rodrigues - Palestra sobre Mercado de Trabalho.webp"
+                  alt="palestrante"
+                />
+              </div>
+            </div>
+            <div class="row mb-5 d-flex justify-content-between card-speaker">
+              <div class="col-md-5 col-lg-5 speaker-img">
+                <img
+                  src="/src/assets/palestrantes/karina.jpg"
+                  alt="palestrante"
+                />
+              </div>
+              <div class="col-md-7 pt-4 info-speaker">
+                <h2>Karina Tronkos</h2>
+                <div class="bio-speaker">
+                  <span>Migração de carreiras: dicas e oportunidades</span>
+                  <p>
+                    Cientista da Computação, UX Designer e foi vencedora do
+                    Scholarship da Apple nos últimos 5 anos. Trabalha na
+                    Accenture e já trabalhou em empresas como Globosat,
+                    Globo.com e Hurb. Entusiasta e apaixonada por design e
+                    tecnologia, criou o Nina Talks para compartilhar sua jornada
+                    e tudo que a empolga e inspira nesse universo!
+                  </p>
+                  <div class="speaker-links">
+                    <h6>Redes Sociais</h6>
+                    <div class="d-flex links">
+                      <a href="" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                      </a>
+                      <a href="" target="_blank">
+                        <i class="bx bxl-github"></i>
+                      </a>
+                      <a href="" target="_blank">
+                        <i class="bx bxl-facebook"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section guests -->
+      <section class="guests">
+        <div class="container">
+          <div class="content-guests">
+            <div class="row">
+              <div class="title-guests">
+                <span>Mesa Redonda: Trilhas a Seguir</span>
+                <h2>Conheça nossos convidados</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md col-lg">
+                <div class="card card-guests">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Áureo Vitor Moura.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-body guests-info">
+                    <h3>Áureo Vitor Moura</h3>
+                    <p>
+                      Formado em Arquitetura e Urbanismo pela UFPI e em
+                      Tecnologia em Análise e Desenvolvimento de Sistemas pelo
+                      IFPI Floriano. Atualmente trabalha como Tech lead no Grupo
+                      Digi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card card-guests">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Eduilson Carneiro.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-body guests-info">
+                    <h3>Eduilson Carneiro</h3>
+                    <p>
+                      Professor EBTT do IFPI com experiência na área de Ciência
+                      da Computação, com ênfase em Tecnologias da Informação,
+                      Geoprocessamento e Informática Urbana tanto no setor
+                      público como setor privado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card card-guests">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Eric Spangler.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-body guests-info">
+                    <h3>Eric Spangler</h3>
+                    <p>
+                      Professor PhD da Universidade Lewis (Romeoville, Illinois,
+                      EUA) nas áreas de Engenharia, Informática e Ciências
+                      Matemáticas onde atua com Mobile Forensics, Cisco Courses,
+                      Linux, Cybersecurity, Digital Forensics, Pen Testing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card card-guests">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Lucas Soares.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-body guests-info">
+                    <h3>Lucas Soares</h3>
+                    <p>
+                      Formado em Tecnologia em Análise e Desenvolvimento de
+                      Sistemas pelo IFPI Floriano. Atualmente trabalha como
+                      Senior Software Engineer na squad de Pagamentos da tribo
+                      de Cartões de Crédito no Will Bank.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section courses -->
+      <section class="courses" id="courses">
+        <div class="container">
+          <div class="content-courses">
+            <div class="row">
+              <div class="title-courses">
+                <span>Minicursos & Oficinas</span>
+                <h2>Quem irá ministrar</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/minicursos/analise-python.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3>ALEXÂNDER ARAÚJO REIS, Ana Paula e Paulo Henrique</h3>
+                    <h5>PROGRAMAÇÃO E ANÁLISE DE DADOS COM PYTHON</h5>
+                    <p>
+                      O curso tem por objetivo ensinar os principais conceitos
+                      de algoritmos e programação em Python e, em seguida,
+                      manipulação e visualização de dados com as bibliotecas
+                      Pandas e Seaborn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img src="/src/assets/minicursos/api-rest.svg" alt="" />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3>Matheus Sales Torres dos Santos Silva</h3>
+                    <h5>Criação e deploy de uma API REST com NodeJs</h5>
+                    <p>
+                      O minicurso tem como objetivo ensinar a manipulação de
+                      APIs utilizando Node JS, Banco de dados relacional e
+                      publicar a aplicação em uma hospedagem real.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img src="/src/assets/minicursos/figma.svg" alt="" />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3>
+                      Maria Klara S. R. de Oliveira & Vanessa de Sousa Rodrigues
+                    </h3>
+                    <h5>Desenvolvendo Layouts do zero com FIGMA</h5>
+                    <p>
+                      O minicurso tem como objetivo realizar uma introdução
+                      sobre a ferramenta de design FIGMA e ensinar técnicas de
+                      forma prática sobre essa ferramenta. Ao final do
+                      minicurso, espera-se que os alunos possam desenvolver
+                      layouts de sites de forma criativa e interativa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-4">
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img src="/src/assets/minicursos/django-rest.svg" alt="" />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3>Marcus Vinicius, Juliane Messias e Elias Araújo</h3>
+                    <h5>Introdução a Django Rest Framework com Python</h5>
+                    <p>
+                      Um Minicurso que visa trazer uma introdução de como é
+                      feita a construção de APIs REST utilizando a estrutura do
+                      Django, e que gere compreensão do público alvo sobre os
+                      fundamentos do framework e de seu funcionamento.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img src="/src/assets/minicursos/ricardo.svg" alt="" />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3 style="margin-top: -18px">RICARDO MARTINS RAMOS</h3>
+                    <h5>Bioinformática com Ricardo Martins</h5>
+                    <p>
+                      No minicurso será trabalhado os conceitos básicos de
+                      Bioinformática e Bioinformatica Estrutural na prática
+                      utilizando plataformas online, ferramentas e softwares.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img src="/src/assets/minicursos/com017.jpg" alt="" />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3>Iago Bezerra, Emanuela de Jesus e Ricardo Félix</h3>
+                    <h5>
+                      Utilizando nodejs para realizar integração com o banco de
+                      dados
+                    </h5>
+                    <p>
+                      Neste minicurso tem como objetivo introduzir NodeJS
+                      integrados ao banco de dados postegresql utilizando Design
+                      que atualmente é mais utilizado no mercado de trabalho MVC
+                      (Model, View e controller) onde serão utilizados alguns
+                      templates engine para realizar a reutilização de código
+                      para o front-end.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-4">
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img src="/src/assets/minicursos/redes.svg" alt="" />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3 style="margin-top: -18px">Guilherme Francisco Dias</h3>
+                    <h5>Introdução a Redes e Segurança</h5>
+                    <p>
+                      O curso tem por objetivo instruir os alunos participantes
+                      aos conceitos iniciais na área de Redes e de Segurança da
+                      Informação, com intuito de esclarecer os termos
+                      introdutórios e algumas tecnologias que são base dessas
+                      matérias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Ghivvago Damas Saraiva - Minicurso de Matemática e Estatística em Python.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3 style="margin-top: -18px">GHIVVAGO DAMAS SARAIVA</h3>
+                    <h5>MATH & STATISTICS WITH PYTHON</h5>
+                    <p>
+                      Uma oficina, estilo 101, onde você aprenderá a utilizar
+                      funções Matemáticas e de Estatística em Python.
+                    </p>
+                    <span>Trilha Feminina</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Wena Ribeiro - Minicurso de Montagem e Manutenção.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3 style="margin-top: -18px">WENA DA COSTA RIBEIRO</h3>
+                    <h5>M&M DE COMPUTADORES PARA EL@AS</h5>
+                    <p>
+                      Uma oficina básica de Montagem e Manutenção de
+                      Computadores.
+                    </p>
+                    <span>Trilha Feminina</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-4">
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Karine Nunes - oficina de Chatbots.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3>Karine Nunes Ribeiro dos Santos</h3>
+                    <h5>Criação de Chatbot com Flutter e a Api Dialogflow</h5>
+                    <p>
+                      Desenvolvimento de aplicativo chatbot utilizando a
+                      framework Flutter com a Plataforma de IA disponibilizada
+                      pelo Google Dialog Flow que é de fácil utilização.
+                    </p>
+                    <span>Trilha Feminina</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Juliana Fernandes - Oficina de Escrita Científica.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3 style="margin-top: -18px">Juliana Costa Fernandes</h3>
+                    <h5>Caminhos para uma Escrita Científica de Sucesso</h5>
+                    <p>
+                      Uma oficina prática para entendimento e iniciação de uma
+                      Escrita Científica de qualidade.
+                    </p>
+                    <span>Trilha Feminina</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md col-lg">
+                <div class="card-courses">
+                  <div class="card-img-box">
+                    <img
+                      src="/src/assets/palestrantes/Laís Félix - Minicurso de Robótica.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-info">
+                    <a href="#" target="_blank">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                  <div class="course-info">
+                    <h3 style="margin-top: -18px">Lais Félix</h3>
+                    <h5>Girls' Robotics 101</h5>
+                    <p>
+                      Uma oficina introdutória de robótica para meninas do
+                      ensino médio.
+                    </p>
+                    <span>Trilha Feminina</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section programs -->
+      <section class="programs" id="programs">
+        <div class="container">
+          <div class="content-tabs">
+            <div class="row">
+              <div class="title-programs">
+                <span>Cronograma</span>
+                <h2>Nossa Programação</h2>
+              </div>
+            </div>
+            <div class="box-tabs">
+              <button class="btn tab-links b1" onclick="OpenTab(event, 'One')">
+                <p>Segunda-Feira</p>
+                <span>04 de Julho de 2022</span>
+              </button>
+              <button class="btn tab-links b2" onclick="OpenTab(event, 'Two')">
+                <p>Terça-Feira</p>
+                <span>05 de Julho de 2022</span>
+              </button>
+              <button
+                class="btn tab-links b3"
+                onclick="OpenTab(event, 'Three')"
+              >
+                <p>Quarta-Feira</p>
+                <span>06 de Julho de 2022</span>
+              </button>
+            </div>
+
+            <div id="One" class="tab-content">
+              <div class="day-box green-hover">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/analise-python.svg"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>ALEXÂNDER ARAÚJO REIS, Ana Paula e Paulo Henrique</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span
+                    >30/06/2022 - 18:00 - 22:00 e 01/07/2022 - 18:00 -
+                    22:00</span
+                  >
+                  <h3>PROGRAMAÇÃO E ANÁLISE DE DADOS COM PYTHON</h3>
+                  <p>
+                    O curso tem por objetivo ensinar os principais conceitos de
+                    algoritmos e programação em Python e, em seguida,
+                    manipulação e visualização de dados com as bibliotecas
+                    Pandas e Seaborn.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/api-rest.svg"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>MATHEUS SALES TORRES DOS SANTOS SILVA</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>04/07/2022 - 08:00 - 12:00</span>
+                  <h3>Criação e deploy de uma API REST com NodeJs</h3>
+                  <p>
+                    O minicurso tem como objetivo ensinar a manipulação de APIs
+                    utilizando Node JS, Banco de dados relacional e publicar a
+                    aplicação em uma hospedagem real.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/ricardo.webp"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>RICARDO MARTINS RAMOS</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>04/07/2022 - 08:00 - 12:00</span>
+                  <h3>Bioinformática com Ricardo Martins</h3>
+                  <p>
+                    No minicurso será trabalhado os conceitos básicos de
+                    Bioinformática e Bioinformatica Estrutural na prática
+                    utilizando plataformas online, ferramentas e softwares.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/figma.svg"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>MARIA KLARA & VANESSA DE SOUSA RODRIGUES</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>04/07/2022 - 13:30 - 17:30</span>
+                  <h3>DESENVOLVENDO LAYOUTS DO ZERO COM FIGMA</h3>
+                  <p>
+                    O minicurso tem como objetivo realizar uma introdução sobre
+                    a ferramenta de design FIGMA e ensinar técnicas de forma
+                    prática sobre essa ferramenta. Ao final do minicurso,
+                    espera-se que os alunos possam desenvolver layouts de sites
+                    de forma criativa e interativa.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/django-rest.svg"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>MARCUS VINICIUS, JULIANE MESSIAS E ELIAS ARAÚJO</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>04/07/2022 - 14:30 - 17:30</span>
+                  <h3>INTRODUÇÃO A DJANGO REST FRAMEWORK COM PYTHON</h3>
+                  <p>
+                    Um Minicurso que visa trazer uma introdução de como é feita
+                    a construção de APIs REST utilizando a estrutura do Django,
+                    e que gere compreensão do público alvo sobre os fundamentos
+                    do framework e de seu funcionamento.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img src="/src/assets/CaisTech-Logo.png" alt="" />
+                  </div>
+                  <h3>Organização CaisTech</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Recepção</span>
+                  </div>
+                  <span>04/07/2022 - 18:00 - 19:00</span>
+                  <h3>Recepção e Credenciamento</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/CaisTech-Logo.png"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>ORGANIZAÇÃO CAISTECH</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Apresentação</span>
+                  </div>
+                  <span>04/07/2022 - 18:30 - 19:00</span>
+                  <h3>Apresentação Cultural</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/CaisTech-Logo.png"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>Rangel Nunes e <br />Simone Magalhães</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Abertura Oficial</span>
+                  </div>
+                  <span>04/07/2022 - 19:00 - 20:00</span>
+                  <h3>Cerimônia de Abertura do CaisTech 2022.</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/ricardo.webp"
+                      alt="Imagem da Apresetadora"
+                    />
+                  </div>
+                  <h3>Ricardo Martins Ramos</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Palestra</span>
+                  </div>
+                  <span>04/07/2022 - 20:00 - 22:00</span>
+                  <h3>A Bioinformática na luta contra a COVID-19.</h3>
+                  <p>
+                    A Bioinformática é uma das áreas mais atualizadas do
+                    conhecimento, com o objetivo de ajudar na prevenção e
+                    tratamento de doenças.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="Two" class="tab-content">
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/womans.png"
+                      alt="Imagem do Minicurso"
+                      style="width: 150px; height: 150px"
+                    />
+                  </div>
+                </div>
+                <div class="info-box">
+                  <div class="type"></div>
+                  <h3 style="font-size: 32px">
+                    Programação da Trilha Women's Cais Tech 2022
+                  </h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/elane e vanessa.webp"
+                      alt="Imagem do Palestrante"
+                    />
+                  </div>
+                  <h3>Elane Saraiva e Vanessa Veloso</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Maratona</span>
+                  </div>
+                  <span>05/07/2022 - 08:00 - 12:00</span>
+                  <h3 style="text-transform: none">MaratonADA</h3>
+                  <p>
+                    Organize sua equipe (máximo 2 amig@s) para participar dessa
+                    minimaratona de programação em homenagem a 1ª Programadora
+                    da História da Computação: Ada Lovelace.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/Ghivvago Damas Saraiva - Minicurso de Matemática e Estatística em Python.webp"
+                      alt="Imagem do Ministrante"
+                    />
+                  </div>
+                  <h3>Ghivvago Damas Saraiva</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Oficina</span>
+                  </div>
+                  <span>05/07/2022 - 08:00 - 12:00</span>
+                  <h3>Math & Statistics with Python</h3>
+                  <p>
+                    Uma oficina, estilo 101, onde você aprenderá a utilizar
+                    funções Matemáticas e de Estatística em Python.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/Wena Ribeiro - Minicurso de Montagem e Manutenção.webp"
+                      alt="Imagem do Ministrante Fernando"
+                    />
+                  </div>
+                  <h3>Wena Ribeiro</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Oficina</span>
+                  </div>
+                  <span>05/07/2022 - 14:00 - 18:00</span>
+                  <h3>M&M para El@as</h3>
+                  <p>
+                    Uma oficina básica de Montagem e Manutenção de Computadores.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/Karine Nunes - oficina de Chatbots.webp"
+                      alt="Imagem do Ministrante Fernando"
+                    />
+                  </div>
+                  <h3>Karine Nunes Ribeiro</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>05/07/2022 - 14:00 - 18:00</span>
+                  <h3>Criação de Chatbot com Flutter e a Api Dialogflow</h3>
+                  <p>
+                    Desenvolvimento de aplicativo chatbot utilizando a framework
+                    Flutter com a Plataforma de IA disponibilizada pelo Google
+                    Dialog Flow que é de fácil utilização.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/Juliana Fernandes - Oficina de Escrita Científica.webp"
+                      alt="Imagem do Ministrante Fernando"
+                    />
+                  </div>
+                  <h3>Juliana Fernandes</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Oficina</span>
+                  </div>
+                  <span>05/07/2022 - 14:00 - 18:00</span>
+                  <h3>Caminhos para uma Escrita Científica de Sucesso</h3>
+                  <p>
+                    Uma oficina prática para entendimento e iniciação de uma
+                    Escrita Científica de qualidade.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/Laís Félix - Minicurso de Robótica.webp"
+                      alt=""
+                    />
+                  </div>
+                  <h3>Lais Félix</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Oficina</span>
+                  </div>
+                  <span>05/07/2022 - 14:00 - 18:00</span>
+                  <h3>Girls' Robotics 101</h3>
+                  <p>
+                    Uma oficina introdutória de robótica para meninas do ensino
+                    médio.
+                  </p>
+                </div>
+              </div>
+              <p class="prog-a pt-3">Programação Minicursos</p>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/ricardo.webp"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>RICARDO MARTINS RAMOS</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>05/07/2022 - 08:00 - 12:00</span>
+                  <h3>Bioinformática com Ricardo Martins</h3>
+                  <p>
+                    No minicurso será trabalhado os conceitos básicos de
+                    Bioinformática e Bioinformatica Estrutural na prática
+                    utilizando plataformas online, ferramentas e softwares.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/figma.svg"
+                      alt="Imagem do Apresetador"
+                    />
+                  </div>
+                  <h3>MARIA KLARA & VANESSA DE SOUSA RODRIGUES</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicurso</span>
+                  </div>
+                  <span>05/07/2022 - 08:30 - 12:00</span>
+                  <h3>DESENVOLVENDO LAYOUTS DO ZERO COM FIGMA</h3>
+                  <p>
+                    O minicurso tem como objetivo realizar uma introdução sobre
+                    a ferramenta de design FIGMA e ensinar técnicas de forma
+                    prática sobre essa ferramenta. Ao final do minicurso,
+                    espera-se que os alunos possam desenvolver layouts de sites
+                    de forma criativa e interativa.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/redes.svg"
+                      alt="Imagem do Palestrante"
+                    />
+                  </div>
+                  <h3>GUILHERME FRANCISCO DIAS</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicusro</span>
+                  </div>
+                  <span>06/07/2022 - 14:00 - 17:00</span>
+                  <h3>Introdução a Redes e Segurança</h3>
+                  <p>
+                    O curso tem por objetivo instruir os alunos participantes
+                    aos conceitos iniciais na área de Redes e de Segurança da
+                    Informação, com intuito de esclarecer os termos
+                    introdutórios e algumas tecnologias que são base dessas
+                    matérias.
+                  </p>
+                </div>
+              </div>
+              <p class="prog-a pt-3">Programação no Auditório</p>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img src="/src/assets/CaisTech-Logo.png" alt="" />
+                  </div>
+                  <h3>Organização CaisTech</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Credenciamento</span>
+                  </div>
+                  <span>05/07/2022 - 18:30 - 19:00</span>
+                  <h3>Credenciamento</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img src="/src/assets/CaisTech-Logo.png" alt="" />
+                  </div>
+                  <h3>Organização CaisTech</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Cerimônia</span>
+                  </div>
+                  <span>05/07/2022 - 19:00 - 19:30</span>
+                  <h3>
+                    Cerimônia de Premiação da
+                    <span style="text-transform: none; color: #22da87"
+                      >MaratonADA</span
+                    >
+                  </h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img src="/src/assets/logo-ifpi.png" alt="" />
+                  </div>
+                  <h3>Apresentação</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Palestra</span>
+                  </div>
+                  <span>05/07/2022 - 19:30 - 20:00</span>
+                  <h3>Relatos de Experiência - Egressas do Campus</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img src="/src/assets/palestrantes/pyLadies.jpeg" alt="" />
+                  </div>
+                  <h3>Karoline Farias e Valeska Uchôa</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Palestra</span>
+                  </div>
+                  <span>05/07/2022 - 20:00 - 21:00</span>
+                  <h3>Roda de Conversa com as Pyladies THE</h3>
+                  <p>
+                    A Pyladies é um grupo internacional, com foco em ajudar mais
+                    mulheres a se tornarem participantes ativas e líderes da
+                    comunidade de código aberto Python.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/Gabrielle Rodrigues - Palestra sobre Mercado de Trabalho.webp"
+                      alt=""
+                    />
+                  </div>
+                  <h3>Gabrielle Rodrigues</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Palestra</span>
+                  </div>
+                  <span>05/07/2022 - 21:00 - 22:00</span>
+                  <h3>Trabalhando em Tech - como é e por onde começar?</h3>
+                  <p>
+                    Um momento para tratarmos da abertura do mercado de trabalho
+                    para as mulheres e lgbtqiap+, sobre o LinkedIn, a
+                    importância da mentoria e etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="Three" class="tab-content">
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/com017.jpg"
+                      alt="Imagem do Palestrante"
+                    />
+                  </div>
+                  <h3>IAGO BEZERRA, EMANUELA DE JESUS E RICARDO FÉLIX</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicusro</span>
+                  </div>
+                  <span>06/07/2022 - 08:00 - 11:00 E 14:00 - 17:00</span>
+                  <h3>
+                    Utilizando nodejs para realizar integração com o banco de
+                    dados
+                  </h3>
+                  <p>
+                    Neste minicurso tem como objetivo introduzir NodeJS
+                    integrados ao banco de dados postegresql utilizando Design
+                    que atualmente é mais utilizado no mercado de trabalho MVC
+                    onde serão utilizados alguns templates engine para realizar
+                    a reutilização de código para o front-end.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/redes.svg"
+                      alt="Imagem do Palestrante"
+                    />
+                  </div>
+                  <h3>GUILHERME FRANCISCO DIAS</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Minicusro</span>
+                  </div>
+                  <span>06/07/2022 - 14:00 - 17:00</span>
+                  <h3>Introdução a Redes e Segurança</h3>
+                  <p>
+                    O curso tem por objetivo instruir os alunos participantes
+                    aos conceitos iniciais na área de Redes e de Segurança da
+                    Informação, com intuito de esclarecer os termos
+                    introdutórios e algumas tecnologias que são base dessas
+                    matérias.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/xadrez.webp"
+                      alt="Imagem do Ministrante"
+                    />
+                  </div>
+                  <h3>ORGANIZAÇÃO CAISTECH</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Competição</span>
+                  </div>
+                  <span>06/07/2022 - 14:00 - 18:00</span>
+                  <h3>Campeonato de Xadrez</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/workshop.svg"
+                      alt="Imagem do Palestrante"
+                    />
+                  </div>
+                  <h3>ORGANIZAÇÃO CAISTECH</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Workshop</span>
+                  </div>
+                  <span>06/07/2022 - 14:00 - 18:00</span>
+                  <h3>WPI - Workshop de Projetos Integradores e TCCs</h3>
+                  <p>
+                    O Workshop de Projetos Integradores e TCCs (WPI) é um evento
+                    que visa ao desenvolvimento de projetos de integração entre
+                    os cursos de graduação e pós-graduação da Universidade
+                    Federal do Piauí (IFPI).
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img src="/src/assets/CaisTech-Logo.png" alt="" />
+                  </div>
+                  <h3>Organização CaisTech</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Credenciamento</span>
+                  </div>
+                  <span>06/07/2022 - 18:00 - 19:00</span>
+                  <h3>Credenciamento</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/palestrantes/karina.jpg"
+                      alt="Imagem do Palestrante"
+                    />
+                  </div>
+                  <h3>Karina Tronkos</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Palestra</span>
+                  </div>
+                  <span>06/07/2022 - 15:00 - 16:00</span>
+                  <h3>Migração de carreiras: dicas e oportunidades</h3>
+                  <p>
+                    Um momento para falarmos sobre Migração de Carreiras,
+                    especialmente na área de UX, trazendo dicas e explicações
+                    sobre as oportunidades e projetos da área.
+                  </p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/minicursos/premiacoes.svg"
+                      alt="Imagem do Ministrante"
+                    />
+                  </div>
+                  <h3>ORGANIZAÇÃO CAISTECH</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Premiação</span>
+                  </div>
+                  <span>06/07/2022 - 19:15 - 19:40</span>
+                  <h3>Cerimônia de Premiação das Competições do Caistech</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="day-box">
+                <div class="profile-box">
+                  <div class="avatar">
+                    <img
+                      src="/src/assets/CaisTech-Logo.png"
+                      alt="Imagem do Ministrante"
+                    />
+                  </div>
+                  <h3>Convidados</h3>
+                </div>
+                <div class="info-box">
+                  <div class="type">
+                    <span>Mesa Redonda</span>
+                  </div>
+                  <span>06/07/2022 - 19:40 - 22:00</span>
+                  <h3>Mesa redonda: Trilhas a Seguir</h3>
+                  <p>
+                    Um momento especial para debater sobre as maravilhosas
+                    trilhas/caminhos a seguir na área de TI.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://forms.gle/Eo1T4NmUWR2i9JWw7"
+              target="_blank"
+              class="btn-join"
+              >Quero participar das atividades</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- section common questions -->
+      <section class="questions" id="questions">
+        <div class="container">
+          <div class="content-questions">
+            <div class="row">
+              <div class="title-questions">
+                <span>Dúvidas</span>
+                <h2>Perguntas Frequêntes</h2>
+              </div>
+            </div>
+            <div class="box-questions">
+              <button type="button" class="collapsible">
+                O que é o Cais Tech?
+              </button>
+              <div class="box-answers">
+                <p>
+                  É o Congresso Anual de Informática do Sul do Piauí. Um evento
+                  que busca disseminar a tecnologia, informática e inovação.
+                </p>
+              </div>
+            </div>
+            <div class="box-questions">
+              <button type="button" class="collapsible">
+                Quando ocorrerá o evento?
+              </button>
+              <div class="box-answers">
+                <p>Este ano o evento acontecerá de 04 a 06 de Julho de 2022.</p>
+              </div>
+            </div>
+            <div class="box-questions">
+              <button type="button" class="collapsible">
+                Qual o valor das inscrições?
+              </button>
+              <div class="box-answers">
+                <p>O evento será totalmente gratuito.</p>
+              </div>
+            </div>
+            <div class="box-questions">
+              <button type="button" class="collapsible">
+                O que eu poderei ver durante o evento?
+              </button>
+              <div class="box-answers">
+                <p>
+                  Neste ano o evento tem o tema de “Trilhas a Seguir”, com isso
+                  traremos palestras, minicursos que vão agregar bastante
+                  conhecimento para você.
+                </p>
+              </div>
+            </div>
+            <div class="box-questions">
+              <button type="button" class="collapsible">
+                Até quando vão as inscrições?
+              </button>
+              <div class="box-answers">
+                <p>As inscrições estarão abertas até dia 01 de Julho.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section sponsors -->
+      <section class="sponsors" id="sponsors">
+        <div class="container">
+          <div class="content-sponsors">
+            <div class="box-realization">
+              <div class="title-realization">
+                <h2>Realização</h2>
+              </div>
+              <div class="img-realization">
+                <img src="/src/assets/logo-ifpi.png" alt="Logo IFPI" />
+              </div>
+            </div>
+            <div class="box-sponsors">
+              <div class="title-sponsors">
+                <h2>Patrocinadores</h2>
+              </div>
+              <div class="img-sponsors">
+                <a href="https://virtex.com.br" target="_blank"
+                  ><img src="/src/assets/virtex.png" alt=""
+                /></a>
+                <a href="http://brnx.com.br" target="_blank"
+                  ><img src="/src/assets/brnx.svg" alt=""
+                /></a>
+              </div>
+            </div>
+            <div style="padding-top: 0px" class="box-sponsors pb-3">
+              <div class="img-sponsors">
+                <a
+                  href="https://www.instagram.com/solar_support/"
+                  target="_blank"
+                  ><img
+                    style="width: 250px"
+                    src="/src/assets/SOLAR-SUPPORT.png"
+                    alt=""
+                /></a>
+                <a
+                  href="https://www.instagram.com/lojasdragaofloriano/"
+                  target="_blank"
+                  ><img
+                    style="width: 250px"
+                    src="/src/assets/lojas-dragao.png"
+                    alt=""
+                /></a>
+                <a
+                  href="https://www.instagram.com/divastoreflo/"
+                  target="_blank"
+                  ><img
+                    style="width: 250px"
+                    src="/src/assets/divastore-logo.jpg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="box-support pt-5">
+              <div class="title-sponsors">
+                <h2>Deseja patrocinar o evento?</h2>
+              </div>
+              <a
+                href="https://forms.gle/DWda8KcKAMZwaWqD6"
+                target="_blank"
+                class="btn-join"
+                >Seja nosso patrocinador</a
+              >
+            </div>
+
+            <!-- <div class="box-support">
+              <div class="title-support">
+                <h2>Suporte</h2>
+              </div>
+              <div class="img-support">
+                <img src="/src/assets/logo-sbc.png" alt="" />
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="subfooter" id="contact">
+        <div class="container">
+          <div class="content-subfooter">
+            <div class="subfooter-infos">
+              <div class="subfooter-brand">
+                <a href="https://caistechflo.netlify.app/"
+                  ><img src="/src/assets/brand.png" alt="logo-cais-tech"
+                /></a>
+              </div>
+            </div>
+            <div class="subfooter-contact">
+              <span>Fale Conosco</span>
+              <h3>Nossos Contatos</h3>
+              <div class="info-contact">
+                <p>Email: contato@caistech.org</p>
+                <p>Local: Instituto Federal do Piauí - IFPI(Campus Floriano)</p>
+              </div>
+              <ul class="social-contact-icons">
+                <li>
+                  <a
+                    href="https://www.instagram.com/caistechflo/"
+                    target="_blank"
+                    ><i class="bx bxl-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/caistech" target="_blank"
+                    ><i class="bx bxl-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/caistech/" target="_blank"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="subfooter-links">
+              <span>Nossos Links</span>
+              <h3>Links de Acesso Rápido</h3>
+              <ul>
+                <li><a href="#about">O Evento</a></li>
+                <li><a href="#speaker">Palestras</a></li>
+                <li><a href="#courses">Minicursos</a></li>
+                <li><a href="#programs">Programação</a></li>
+                <li><a href="#questions">Inscrição</a></li>
+                <li><a href="#sponsors">Realização</a></li>
+                <li><a href="#contact">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="footer">
+        <div class="container">
+          <div class="content-footer">
+            <div class="footer-info">
+              <p>&copy;2022. Alguns direitos reservados</p>
+            </div>
+            <div class="footer-brand">
+              <a href="https://caistechflo.netlify.app/"
+                ><img src="/src/assets/brand.png" alt="logo-cais-tech"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <a href="#wrapper" id="btn-fixed"><i class="bx bx-up-arrow-alt"></i></a>
+    </main>
+    <script type="text/javascript" src="./src/js/countdown.js"></script>
+    <script type="text/javascript" src="./src/js/sidenav.js"></script>
+    <script type="text/javascript" src="./src/js/tab.js"></script>
+    <script type="text/javascript" src="./src/js/collapse.js"></script>
   </body>
 </html>

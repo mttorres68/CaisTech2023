@@ -1,0 +1,131 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.content-area {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.content-area-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-area-wrapper span {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-lightblue);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.content-area-wrapper h1 {
+  display: flex;
+  font-size: var(--font-64px);
+  font-weight: 900;
+  color: var(--color-light);
+  max-width: 700px;
+}
+
+.content-area-wrapper h1::after {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 530px;
+  margin-left: 0px;
+  margin-top: 30px;
+  z-index: -1;
+  background: var(--color-purple);
+  box-shadow: 0 20px 0 0 var(--color-lightblue);
+}
+
+.content-area-wrapper h6 {
+  width: 470px;
+  margin-top: 16px;
+  margin-bottom: 38px;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: var(--font-18px);
+  font-weight: 600;
+  font-family: "Karla", sans-serif;
+  color: #ffffff;
+  display: inline-block;
+  background-color: rgba(151, 235, 193, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .content-area {
+    padding: 0;
+    justify-content: center;
+  }
+  .content-area-wrapper h1 {
+    font-size: var(--font-32px) !important;
+    justify-content: center;
+    text-align: center;
+  }
+  .content-area-wrapper h1::after {
+    content: none;
+  }
+  .content-area-wrapper span {
+    text-align: center;
+  }
+  .content-area-wrapper h6 {
+    width: 100%;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(151, 235, 193, 0.1) !important;
+  }
+  .content-area-wrapper p {
+    text-align: center;
+  }
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .buttons .btn-main {
+    width: 100%;
+    margin: 0px 0;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: 600px;
+  }
+  .content-area {
+    justify-content: center;
+  }
+  .content-area-wrapper h1 {
+    font-size: var(--font-48px);
+    justify-content: center;
+    text-align: center;
+  }
+  .content-area-wrapper h1::after {
+    content: none;
+  }
+  .content-area-wrapper span {
+    text-align: center;
+  }
+  .content-area-wrapper h6 {
+    width: 100%;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(151, 235, 193, 0.1) !important;
+  }
+  .content-area-wrapper p {
+    text-align: center;
+  }
+}
