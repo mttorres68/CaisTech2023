@@ -48,10 +48,10 @@
 
 .content-area-wrapper h6 {
   width: 470px;
-  margin-top: 16px;
-  margin-bottom: 38px;
+  margin-left: -300px;
+  margin-bottom: -500px;
   text-transform: uppercase;
-  text-align: left;
+  text-align: right;
   font-size: var(--font-18px);
   font-weight: 600;
   font-family: "Karla", sans-serif;
@@ -121,8 +121,8 @@
   .content-area-wrapper h6 {
     width: 100%;
     font-size: 16px;
-    justify-content: center;
-    text-align: center;
+    justify-content: end;
+    text-align: end;
     background-color: rgba(151, 235, 193, 0.1) !important;
   }
   .content-area-wrapper p {

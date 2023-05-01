@@ -56,6 +56,7 @@
   margin-bottom: 16px;
   color: var(--color-gray);
   font-family: "Karla", sans-serif;
+  text-align: justify;
 }
 
 .bio-speaker .speaker-links {
@@ -92,7 +93,7 @@
 }
 
 .speaker-img img {
-  border-radius: 7px;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 576px) {

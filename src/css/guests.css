@@ -149,6 +149,7 @@
 
   padding: 0px 14px;
   box-sizing: border-box;
+  
 }
 
 .card-guests .guests-info h3 {
@@ -175,6 +176,7 @@
   line-height: 1.5em;
   transition: all 0.5s;
   color: var(--color-light);
+  text-align: justify;
 }
 
 /* .card-guests:hover .guests-info p {

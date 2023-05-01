@@ -47,6 +47,7 @@
   line-height: var(--font-24px);
   margin-bottom: var(--font-16px);
   font-family: "Karla", sans-serif;
+  text-align: justify;
 }
 
 @media screen and (max-width: 576px) {
@@ -98,4 +99,33 @@
   .about-info h2::after {
     margin-top: 12px;
   }
+}
+
+.about-links h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-purple);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.about-links .links {
+  margin-top: 20px;
+  grid-gap: 20px;
+}
+
+.content-about .about-links .links a i {
+  text-decoration: none;
+  color: var(--color-light);
+  font-size: var(--font-24px);
+  transition: all 0.3s;
+  background: var(--color-purple);
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.content-about .about-links  .links a i:hover {
+  box-shadow: inset 2.5em 0 0 0 var(--color-lightblue);
+  color: var(--color-light);
 }
