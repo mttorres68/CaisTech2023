@@ -19,11 +19,15 @@
 }
 
 .content-area-wrapper span {
-  font-size: 15px;
+  font-size: 28px;
   font-weight: 600;
-  color: var(--color-lightblue);
+  color: var(--color-ctech-200);
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  margin-left: -300px;
+  background-color: rgba(151, 235, 193, 0.14);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .content-area-wrapper h1 {
@@ -32,6 +36,8 @@
   font-weight: 900;
   color: var(--color-light);
   max-width: 700px;
+  margin-left: -300px;
+
 }
 
 .content-area-wrapper h1::after {
@@ -43,7 +49,7 @@
   margin-top: 30px;
   z-index: -1;
   background: var(--color-purple);
-  box-shadow: 0 20px 0 0 var(--color-lightblue);
+  box-shadow: 0 10px 0 0 var(--color-lightblue);
 }
 
 .content-area-wrapper h6 {
@@ -71,12 +77,19 @@
     font-size: var(--font-32px) !important;
     justify-content: center;
     text-align: center;
+    margin-left: 0px;
+
   }
   .content-area-wrapper h1::after {
     content: none;
+    margin-left: 0px;
+
   }
   .content-area-wrapper span {
     text-align: center;
+    margin-left: 0px;
+    font-size: 20px;
+
   }
   .content-area-wrapper h6 {
     width: 100%;
@@ -84,6 +97,8 @@
     justify-content: center;
     text-align: center;
     background-color: rgba(151, 235, 193, 0.1) !important;
+    margin-left: 0px;
+    margin-bottom: 100px;
   }
   .content-area-wrapper p {
     text-align: center;
