@@ -4,12 +4,14 @@
 }
 
 .content-area {
+  position: absolute;
   width: 100%;
-  height: 700px;
+  height: 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 15px;
+	margin-top: -38vh;
 }
 
 .content-area-wrapper {
@@ -24,7 +26,7 @@
   color: var(--color-ctech-200);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-left: -300px;
+  margin-left: -100px;
   background-color: rgba(151, 235, 193, 0.14);
   padding: 10px 20px;
   border-radius: 10px;
@@ -36,7 +38,7 @@
   font-weight: 900;
   color: var(--color-light);
   max-width: 700px;
-  margin-left: -300px;
+  margin-left: -100px;
 
 }
 
@@ -54,7 +56,7 @@
 
 .content-area-wrapper h6 {
   width: 470px;
-  margin-left: -300px;
+  margin-left: -100px;
   margin-bottom: -500px;
   text-transform: uppercase;
   text-align: right;
@@ -69,36 +71,41 @@
 }
 
 @media screen and (max-width: 576px) {
+  .wrapper {
+    height: 0;
+  }
+  
   .content-area {
-    padding: 0;
-    justify-content: center;
+    /* padding: 0;
+    justify-content: center; */
+    height: 0;
   }
   .content-area-wrapper h1 {
-    font-size: var(--font-32px) !important;
+    font-size: 18px ;
     justify-content: center;
     text-align: center;
-    margin-left: 0px;
+    /* margin-left: 0px; */
 
   }
   .content-area-wrapper h1::after {
     content: none;
-    margin-left: 0px;
+    /* margin-left: 0px; */
 
   }
   .content-area-wrapper span {
     text-align: center;
-    margin-left: 0px;
+    /* margin-left: 0px; */
     font-size: 20px;
 
   }
   .content-area-wrapper h6 {
     width: 100%;
     font-size: 14px;
-    justify-content: center;
-    text-align: center;
+    justify-content: end;
+    text-align: end;
     background-color: rgba(151, 235, 193, 0.1) !important;
-    margin-left: 0px;
-    margin-bottom: 100px;
+    /* margin-left: 0px;
+    margin-bottom: 100px; */
   }
   .content-area-wrapper p {
     text-align: center;
@@ -115,9 +122,10 @@
     font-size: 14px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .wrapper {
-    height: 600px;
+    height: 0;
   }
   .content-area {
     justify-content: center;

@@ -61,15 +61,67 @@
         </div>
       </section>
       <!-- section wrapper -->
-      <div id="cover"></div>
-      <header class="wrapper" id="wrapper">
+      <div  id="cover">
+              <!-- SLIDER -->
+        <div class="slider">
+
+        <div class="slides">
+          <!-- RADIO BUTTONS -->
+          <input type="radio" name="radio-tbn" id="radio1">
+          <input type="radio" name="radio-tbn" id="radio2">
+          <input type="radio" name="radio-tbn" id="radio3">
+          <input type="radio" name="radio-tbn" id="radio4">
+          <input type="radio" name="radio-tbn" id="radio5">
+          <!-- FIM -->
+
+          <!-- SLIDER IMG -->
+          <div class="slide first">
+            <img src="src/assets/caisTech2023/imgCaisTech/bgEvento.jpg" alt="Imagem Evento">
+          </div>
+          <div class="slide ">
+            <img src="src/assets/caisTech2023/carrosel/carvalhoFer_full.jpg" alt="Imagem Evento">
+          </div>
+          <div class="slide ">
+            <img src="src/assets/caisTech2023/imgCaisTech/bgEvento.jpg" alt="Imagem Evento">
+          </div>
+          <div class="slide ">
+            <img src="/src/assets/caisTech2023/imgCaisTech/fifa23.jpg" alt="Imagem Evento">
+          </div>
+          <div class="slide ">
+            <img src="src/assets/caisTech2023/imgCaisTech/bgEvento.jpg" alt="Imagem Evento">
+          </div>
+          <!-- FIM IMG -->
+
+          <!-- SLIDE NAVIGATION -->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+            <div class="auto-btn5"></div>
+          </div>
+
+        </div>
+        
+        <!-- LABEL NAVIGATION -->
+        <div class="manual-navigation">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+          <label for="radio5" class="manual-btn"></label>
+        </div>
+
+      </div>
+      </div>
+      <header class="wrapper" id="wrapper" >
         <div class="container">
           <div class="content-area">
             <div class="content-area-wrapper " >
-              <span  >Sejam Bem-vindos ao </span>
-              <h1 class="t-1">CAISTECH 2023</h1>
-              <h6>O maior evento de tecnologia do Sul do Piauí.</h6>
-              <div hidden class="buttons">
+              <span >Sejam Bem-vindos ao </span>
+              <h1  class="t-1">CAISTECH 2023</h1>
+              <h6 >O maior evento de tecnologia do Sul do Piauí.</h6>
+              <div hidden  class="buttons">
                 <a
                   class="btn btn-main"
                   href="https://api.whatsapp.com/send?phone=89994409955"
@@ -97,6 +149,9 @@
           </li>
         </div>
       </header>
+
+
+
 
       <section class="event-register" hidden>
         <div class="container">
@@ -517,7 +572,7 @@
                 <div class="profile-box">
                   <div class="avatar">
                     <img
-                      src="/src/assets/caisTech2023/palestrantes/Pedro.webp"
+                      src="/src/assets/caisTech2023/palestrantes/pedro.jpg"
                       alt="Imagem do Apresetador"
                     />
                   </div>
@@ -1951,6 +2006,7 @@
       </footer>
       <a href="#wrapper" id="btn-fixed"><i class="bx bx-up-arrow-alt"></i></a>
     </main>
+    <script type="text/javascript" src="./src/js/slide.js" ></script>
     <script type="text/javascript" src="./src/js/countdown.js"></script>
     <script type="text/javascript" src="./src/js/sidenav.js"></script>
     <script type="text/javascript" src="./src/js/tab.js"></script>
