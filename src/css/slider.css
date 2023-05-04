@@ -8,7 +8,7 @@
 
 .slides{
 	width: 500%;
-	height: 800%;
+	height: 1000%;
 	display: flex;
 }
 
@@ -34,6 +34,8 @@
 	display: flex;
 	justify-content: center;
 }
+
+
 
 /*
 	mt = tela nt -360vh e celular
@@ -63,6 +65,7 @@
 	border-radius: 10px;
 	cursor: pointer;
 	transition: 1s;
+	display: none;
 }
 
 .manual-btn:not(:last-child){
