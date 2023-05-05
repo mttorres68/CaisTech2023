@@ -26,8 +26,8 @@
   color: var(--color-ctech-200);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-left: -100px;
-  background-color: rgba(151, 235, 193, 0.14);
+  margin-left: 0px;
+  background-color: rgba(151, 235, 193, 0.859) !important;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -38,8 +38,13 @@
   font-weight: 900;
   color: var(--color-light);
   max-width: 700px;
-  margin-left: -100px;
-
+  /* margin-left: -100px; */
+  color: var(--color-ctech-100);
+  /* background-color: rgba(151, 235, 193, 0.859) !important; */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 2px 2px;
 }
 
 .content-area-wrapper h1::after {
@@ -52,20 +57,23 @@
   z-index: -1;
   background: var(--color-purple);
   box-shadow: 0 10px 0 0 var(--color-lightblue);
+  background-color: rgba(151, 235, 193, 0.426);
+
 }
 
 .content-area-wrapper h6 {
   /* width: 470px; */
-  margin-left: -100px;
+  /* margin-left: -100px; */
   margin-bottom: -500px;
   text-transform: uppercase;
-  text-align: right;
+  /* text-align: ; */
   font-size: var(--font-18px);
   font-weight: 600;
   font-family: "Karla", sans-serif;
   color: #ffffff;
   display: inline-block;
-  background-color: rgba(151, 235, 193, 0.1);
+  color: var(--color-ctech-100);
+  background-color: rgba(151, 235, 193, 0.859) !important;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -134,21 +142,32 @@
     font-size: var(--font-32px);
     justify-content: center;
     text-align: center;
+    
   }
   .content-area-wrapper h1::after {
     content: none;
   }
   .content-area-wrapper span {
     text-align: center;
+    margin-right: 18px;
   }
+  
   .content-area-wrapper h6 {
-    width: 100%;
+    /* width: 100%; */
     font-size: 16px;
     justify-content: center;
     text-align: center;
-    background-color: rgba(151, 235, 193, 0.1) !important;
+    background-color: rgba(151, 235, 193, 0.859) !important;
+    margin-left: -10px;
+
   }
   .content-area-wrapper p {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content-area-wrapper span {
+    margin-left: 0px;
   }
 }
