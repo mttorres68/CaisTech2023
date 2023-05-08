@@ -169,10 +169,10 @@ img {
 }
 
 #cover {
-  /* position: absolute; */
+  position: relative; 
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 100% ;
   /* background-color: var(--color-secondary);
   background-image: url("/src/assets/caisTech2023/imgCaisTech/bgEvento.jpg"); */
   transform: scaleX(1);
@@ -189,16 +189,30 @@ img {
   background: rgba(0, 2, 37, 0.342);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 350px) {
   #cover {
-    height: 600px;
+    height: 10vh;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width:499px) {
   #cover {
-    height: 200px;
+    height: 50vh;
   }
 }
+
+@media screen and (max-width: 960px) {
+  #cover {
+    height: 50%;
+  }
+} 
+@media screen and (min-width: 1501px) and (max-width: 1900px) { 
+  #cover {
+    height: 100%;
+  }
+} 
+
+
+
 
 ::-webkit-scrollbar {
   width: 7px;
