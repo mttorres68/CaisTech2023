@@ -19,4 +19,5 @@
 @import "/src/css/footer.css";
 @import "/src/css/sidenav.css";
 @import "/src/css/speaker.css";
-@import "/src/css/slider.css";
+
+@import "src/css/sliders.css";

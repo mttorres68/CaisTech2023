@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="/src/assets/favicon.ico" />
     <title>Cais Tech 2023 | Online</title>
 
@@ -60,65 +61,44 @@
           </nav>
         </div>
       </section>
+
       <!-- COVER -->
       <div  id="cover">
-              <!-- SLIDER -->
-        <div class="slider">
 
-        <div class="slides">
-          <!-- RADIO BUTTONS -->
-          <input type="radio" name="radio-tbn" id="radio1">
-          <input type="radio" name="radio-tbn" id="radio2">
-          <input type="radio" name="radio-tbn" id="radio3">
-          <input type="radio" name="radio-tbn" id="radio4">
-          <input type="radio" name="radio-tbn" id="radio5">
-          <!-- FIM -->
-
-          <!-- SLIDER IMG -->
-          <div class="slide first">
-            <a target="_blank" href="https://www.instagram.com/aiqfome/">
-              <img src="src/assets/caisTech2023/carrosel/aiQueFome_full.jpg" alt="Imagem Evento">
-            </a>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a target="_blank" href="https://instagram.com/cfassessoriacontabil?igshid=YmMyMTA2M2Y="><img src="src/assets/caisTech2023/carrosel/carvalhoFerreira.jpg" alt=""></a>
+            </div>
+            <div class="swiper-slide">
+              <img src="src/assets/caisTech2023/carrosel/divaStore_full.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="src/assets/caisTech2023/carrosel/Fome.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="src/assets/caisTech2023/carrosel/O_Boticário.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="src/assets/caisTech2023/carrosel/sanJoias_full.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="src/assets/caisTech2023/carrosel/solarSuporte_full.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="src/assets/caisTech2023/carrosel/Virtex.jpg" alt="">
+            </div>
           </div>
-          <div class="slide ">
-            <img src="src/assets/caisTech2023/carrosel/carvalhoFer_full.jpg" alt="Imagem Evento">
-          </div>
-          <div class="slide ">
-            <img src="src/assets/caisTech2023/carrosel/divaStore_full.jpg" alt="Imagem Evento">
-          </div>
-          <div class="slide ">
-            <img src="src/assets/caisTech2023/carrosel/sanJoias_full.jpg" alt="Imagem Evento">
-          </div>
-          <div class="slide ">
-            <img src="src/assets/caisTech2023/carrosel/solarSuporte_full.jpg" alt="Imagem Evento">
-          </div>
-          <!-- FIM IMG -->
-
-          <!-- SLIDE NAVIGATION -->
-          <div hidden class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-            <div class="auto-btn5"></div>
-          </div>
-
+          <div hidden class="swiper-button-next"></div>
+          <div hidden class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        
-        <!-- LABEL NAVIGATION -->
-        <div class="manual-navigation">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label>
-          <label for="radio5" class="manual-btn"></label>
-        </div>
+      </div>
 
-      </div>
-      </div>
       <!-- section wrapper -->
-      <header hidden class="wrapper" id="wrapper" >
-        <div class="container">
+      <header  class="wrapper" id="wrapper" >
+        <div hidden class="container">
           <div class="content-area">
             <div class="content-area-wrapper " >
               <span >Sejam Bem-vindos ao </span>
@@ -153,7 +133,7 @@
         </div>
       </header>
 
-      <section class="event-register" hidden>
+      <!-- <section class="event-register" hidden>
         <div class="container">
           <div class="register-content">
             <div class="row">
@@ -173,9 +153,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- section event counter -->
+
       <!-- <section class="event-counter">
         <div class="container">
           <div class="content-event">
@@ -224,6 +205,7 @@
           </div>
         </div>
       </section> -->
+      
       <!-- section about -->
       <section class="about" id="about">
         <div class="container">
@@ -783,7 +765,7 @@
               <div class="col-md-5 col-lg-5 speaker-img">
                 <img
                   src="/src/assets/palestrantes/Karoline Farias - Palestra PyLadies THE.webp"
-                  alt="palestrante"
+                  alt="palestrante-01"
                 />
               </div>
               <div class="col-md-7 pt-4 info-speaker">
@@ -959,7 +941,7 @@
                 </div>
               </div>
 
-              <div class="col-md col-lg" hidden>
+              <!-- <div class="col-md col-lg" hidden>
                 <div class="card card-guests">
                   <div class="card-img-box">
                     <img
@@ -977,7 +959,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
           </div>
         </div>
@@ -1381,11 +1363,11 @@
 
               <div class="img-sponsors" hidden>
                 <a href="https://virtex.com.br" target="_blank"
-                  ><img src="/src/assets/virtex.png" alt=""
+                  ><img src="src/assets/caisTech2023/patrocinadores/virtex.png" alt=""
                 /></a>
-                <a href="http://brnx.com.br" target="_blank"
+                <!-- <a href="http://brnx.com.br" target="_blank"
                   ><img src="/src/assets/brnx.svg" alt=""
-                /></a>
+                /></a> -->
               </div>
             </div>
 
@@ -1535,10 +1517,30 @@
       </footer>
       <a href="#wrapper" id="btn-fixed"><i class="bx bx-up-arrow-alt"></i></a>
     </main>
-    <script type="text/javascript" src="./src/js/slide.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- <script type="text/javascript" src="./src/js/countdown.js"></script> -->
     <script type="text/javascript" src="./src/js/sidenav.js"></script>
     <script type="text/javascript" src="./src/js/tab.js"></script>
     <script type="text/javascript" src="./src/js/collapse.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
