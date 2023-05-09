@@ -6,7 +6,7 @@
   width: 100%;
   position: fixed;
 
-  background: rgba(6, 0, 24, 0.8);
+  background: rgb(6, 0, 24);
   transition: all 0.3s;
   backdrop-filter: blur(6px);
   

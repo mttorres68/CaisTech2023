@@ -215,6 +215,7 @@
   line-height: 20px;
   font-weight: 400;
   font-family: "Karla", sans-serif;
+  text-align: justify;
 }
 
 @media screen and (max-width: 576px) {
