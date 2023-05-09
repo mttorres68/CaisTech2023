@@ -1,6 +1,10 @@
 window.onscroll = function () {
   scrollFunction();
+
 };
+
+
+
 function scrollFunction() {
   if (
     document.body.scrollTop > 600 ||
@@ -13,3 +17,5 @@ function scrollFunction() {
     document.getElementById("navbar").style.background = "#030303";
   }
 }
+
+

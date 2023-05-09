@@ -1,18 +1,24 @@
+
 .navigation {
-  position: absolute;
   padding: 5px 0;
-  z-index: 1000;
+  top:0;
+  z-index: 9999;
   width: 100%;
+  position: fixed;
+
   background: rgba(6, 0, 24, 0.8);
   transition: all 0.3s;
-  position: fixed;
+  backdrop-filter: blur(6px);
+  
 
 }
 
 .navbar {
   display: flex;
+  
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .navbar .navbar-brand {
