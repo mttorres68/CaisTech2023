@@ -9,6 +9,7 @@
   font-weight: 600;
   color: var(--color-lightblue);
   letter-spacing: 2px;
+  visibility: hidden;
 }
 
 .title-programs h2 {
@@ -18,6 +19,7 @@
   font-weight: 800;
   color: var(--color-light);
   letter-spacing: 2px;
+  visibility: hidden;
 }
 
 .title-programs h2::after {
@@ -28,15 +30,18 @@
   height: 5px;
   background: var(--color-lightblue);
   margin-top: var(--font-32px);
+  visibility: hidden;
 }
 
 .tabs {
   width: 100%;
+  visibility: hidden;
 }
 
 .content-tabs {
   width: 100%;
   padding: var(--font-96px) 15px;
+  visibility: hidden;
 }
 
 .box-tabs {
