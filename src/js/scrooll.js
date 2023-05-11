@@ -1,22 +1,26 @@
 window.rs = ScrollReveal({ reset: true });
 
 rs.reveal('.title-programs span', {    
-    duration: 1000,
+    duration: 2000,
     easing: 'cubic-bezier(0.5, 0, 0, 1)' 
 })
 
 rs.reveal('.title-programs h2', {    
-    duration: 1000,
+    duration: 2000,
     easing: 'cubic-bezier(0.5, 0, 0, 1)' 
 })
 rs.reveal('.tabs', {    
-    duration: 1000,
+    duration: 2000,
     easing: 'cubic-bezier(0.5, 0, 0, 1)' 
 })
-rs.reveal('.content-tabs', {    
-    duration: 1000,
+rs.reveal('.box-tabs', {    
+    duration: 2500,
     easing: 'cubic-bezier(0.5, 0, 0, 1)' 
 })
+
+
+
+
 
 // SPEAKERS
 // rs.reveal('.content-speaker', {

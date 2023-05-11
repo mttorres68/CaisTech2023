@@ -41,7 +41,6 @@
 .content-tabs {
   width: 100%;
   padding: var(--font-96px) 15px;
-  visibility: hidden;
 }
 
 .box-tabs {
@@ -49,6 +48,7 @@
   border-radius: 0px;
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 
 .tab-links {
