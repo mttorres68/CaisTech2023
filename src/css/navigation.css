@@ -14,7 +14,7 @@
 }
 
 .navbar {
-  display: flex;
+  display: flexbox;
   
   align-items: center;
   justify-content: space-between;
